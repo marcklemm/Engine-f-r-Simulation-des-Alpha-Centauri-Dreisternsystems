@@ -1,7 +1,12 @@
 # Datei zur konfiguration der Simulation
 from engine_euler import *
 
-objekt1 = Objekt(masse=1, pos=[0, 0, 15], id= "n1")
-objekt2 = Objekt(masse=1, pos=[1, 2, 5], id="n2")
-objekt3 = Objekt(masse=1, pos=[2, 5, 3], id="n3")
-simulation(100)
+
+erde = Objekt(masse=5.9722e24, pos=[0, 0, 0])
+mond = Objekt(masse=7.342e22, pos=[0.4055e6, 0, 0], v_vek=[0, 970, 0])
+
+
+simulation(10)
+
+plt.show()
+
