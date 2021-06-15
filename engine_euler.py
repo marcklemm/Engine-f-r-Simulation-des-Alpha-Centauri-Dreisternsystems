@@ -71,7 +71,7 @@ def simulation(t):
 
 def output(data, output_file):
     with open(output_file, 'a') as log:
-        json.dump(data, log, indent = len(data))
+        json.dump(data, log, indent = len(data), seperators=',')
 
 
 fig = plt.figure(figsize=(4,4))
