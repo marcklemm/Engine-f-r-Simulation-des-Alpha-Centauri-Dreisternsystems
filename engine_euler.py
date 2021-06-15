@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import json
 # In dieser Datei sind alle Funktionen beinhaltet, welche in main.py benötigt werden.
 # Konstanten
 g = - 6.67430e-11
@@ -39,6 +40,7 @@ def gravitation(obj1, obj2):
         obj1.a_vek[i] = - g * (obj2.masse)/(betrag_vek) * richtungs_vek[i]
 
 
+
 def pos_update():
     for obj in objekte:
 
@@ -66,5 +68,13 @@ def simulation(t):
         pos_update()
         vergangene_t += dt
 
+
+def output(data, output_file):
+    with open(output_file, 'a') as log:
+        json.dump(data, log, indent = len(data))
+
+
+fig = plt.figure(figsize=(4,4))
+ax = fig.add_subplot(111, projection='3d')
 fig = plt.figure(figsize=(4,4))
 ax = fig.add_subplot(111, projection='3d')
