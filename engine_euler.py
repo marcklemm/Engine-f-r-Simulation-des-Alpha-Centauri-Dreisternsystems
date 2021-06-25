@@ -1,80 +1,85 @@
-import matplotlib.pyplot as plt
+import numpy as np
 import json
-# In dieser Datei sind alle Funktionen beinhaltet, welche in main.py benötigt werden.
-# Konstanten
-g = - 6.67430e-11
+import matplotlib.pyplot as plt
 
-# Objekt-Array
+'''Konstanten'''
+G = 6.67430e-11
+
+'''Objekt-Array'''
 objekte = []
 
-# Variabeln
-dt = 0.01
+'''Funktionen'''
+
+
+def sqrt(x):
+    # berechnet die Wurzel
+    return x**0.5
+
+
+def sq(x):
+    # berechnet das Quadrat
+    return x**2
+
+
+'''Simulation'''
 
 
 class Objekt:
-    def __init__(self, masse=1, pos=[0, 0, 0], a_vek=[0, 0, 0], v_vek=[0, 0, 0]):
+    def __init__(self, name='objekt', masse=1, pos=np.array([0, 0, 0]), a_vek=np.array([0, 0, 0]), v_vek=np.array([0, 0, 0])):
+        self.name = name
         self.masse = masse
         self.pos = pos
         self.a_vek = a_vek
         self.v_vek = v_vek
-
-        # fügt Objekt in "objekte" ein
         objekte.append(self)
 
-# Funktionen
+    def __repr__(self):
+        return self.name
 
 
 def gravitation(obj1, obj2):
-    richtungs_vek = [0, 0, 0]
-    betrag_vek = [0, 0, 0]
+    richtungs_vek = np.array([0, 0, 0])
 
-    # Differenz der Vektoren
+    '''Differenz der Vektoren'''
     for i in range(0, 3):
         richtungs_vek[i] = obj2.pos[i]-obj1.pos[i]
 
-    # Betrag des Vektors und hoch 3
-    betrag_vek = (richtungs_vek[0]**2 + richtungs_vek[1]**2 + richtungs_vek[2]**2)**(0.5*3)
+    '''Betrag des Vektors'''
+    betrag = sqrt(sq(richtungs_vek[0]) + sq(richtungs_vek[1]) + sq(richtungs_vek[2]))
 
-    # Beschleunigungsvektor
+    '''Beschleunigungsvektor'''
     for i in range(0, 3):
-        obj1.a_vek[i] = - g * (obj2.masse)/(betrag_vek) * richtungs_vek[i]
+        obj1.a_vek[i] = G * obj2.masse/betrag**3 * richtungs_vek[i]
 
 
-
-def pos_update():
-    for obj in objekte:
-
-        # berechnet die Position nach dt
-        for i in range(0, 3):
-            obj.pos[i] += obj.v_vek[i] * dt + 0.5 * obj.a_vek[i] * dt**2
-
-        # berechnet den Geschwindigkeits Vektor
-        for i in range(0, 3):
-            obj.v_vek[i] += obj.a_vek[i] * dt
-
-
-def simulation(t):
+def simulation(dt, t):
     vergangene_t = 0
     while vergangene_t <= t:
 
-        # berechnet die Position aller Objekte
+        '''berechnet die Position aller Objekte'''
         for obj1 in objekte:
             ax.scatter(obj1.pos[0], obj1.pos[1], obj1.pos[2])
             for obj2 in objekte:
                 if obj1 != obj2:
                     gravitation(obj1, obj2)
-            print(vergangene_t, obj1.pos)
+        print(vergangene_t, 'Erde: ', objekte[0].pos, 'Mond: ', objekte[1].pos)
 
-        pos_update()
+        for obj in objekte:
+
+            '''berechnet die Position nach dt'''
+            for i in range(0, 3):
+                obj.pos[i] += obj.v_vek[i] * dt + 0.5 * obj.a_vek[i] * sq(dt)
+
+            '''berechnet den Geschwindigkeits Vektor'''
+            for i in range(0, 3):
+                obj.v_vek[i] += obj.a_vek[i] * dt
         vergangene_t += dt
 
 
 def output(data, output_file):
     with open(output_file, 'a') as log:
-        json.dump(data, log, indent = len(data), seperators=',')
+        json.dump(data, log, indent=len(data), separators=(',', ':'))
 
 
-fig = plt.figure(figsize=(4,4))
-ax = fig.add_subplot(111, projection='3d')
-fig = plt.figure(figsize=(4,4))
+fig = plt.figure(figsize=(4, 4))
 ax = fig.add_subplot(111, projection='3d')
