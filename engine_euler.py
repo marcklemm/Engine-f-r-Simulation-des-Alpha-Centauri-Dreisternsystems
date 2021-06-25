@@ -5,6 +5,10 @@ import matplotlib.pyplot as plt
 '''Konstanten'''
 G = 6.67430e-11
 
+'''Einheiten'''
+ykg = 10e24 # yotta kg
+mkm = 10e9 # mega km
+
 '''Objekt-Array'''
 objekte = []
 
@@ -25,22 +29,18 @@ def sq(x):
 
 
 class Objekt:
-    def __init__(self, name='objekt', masse=1, pos=np.array([0, 0, 0]), a_vek=np.array([0, 0, 0]), v_vek=np.array([0, 0, 0])):
-        self.name = name
+    def __init__(self, masse=1, pos=np.array([0., 0., 0.]), a_vek=np.array([0., 0., 0.]), v_vek=np.array([0., 0., 0.])):
         self.masse = masse
         self.pos = pos
         self.a_vek = a_vek
         self.v_vek = v_vek
         objekte.append(self)
 
-    def __repr__(self):
-        return self.name
-
 
 def gravitation(obj1, obj2):
-    richtungs_vek = np.array([0, 0, 0])
+    richtungs_vek = np.array([0., 0., 0.])
 
-    '''Differenz der Vektoren'''
+    '''Differenz der Vektoren -> Richtungsvektor'''
     for i in range(0, 3):
         richtungs_vek[i] = obj2.pos[i]-obj1.pos[i]
 
@@ -49,11 +49,20 @@ def gravitation(obj1, obj2):
 
     '''Beschleunigungsvektor'''
     for i in range(0, 3):
-        obj1.a_vek[i] = G * obj2.masse/betrag**3 * richtungs_vek[i]
+        obj1.a_vek[i] = - G * obj2.masse/betrag**3 * richtungs_vek[i]
+
+def result(pos1, pos2):
+    x = 0
+    print(pos1, pos2)
+    for i in range(0, 3):
+         x += sqrt(sq(pos2[i]-pos1[i]))
+    return x
 
 
 def simulation(dt, t):
     vergangene_t = 0
+    anfangs_vek = np.array([x for x in objekte[1].pos])
+    print(anfangs_vek)
     while vergangene_t <= t:
 
         '''berechnet die Position aller Objekte'''
@@ -74,6 +83,7 @@ def simulation(dt, t):
             for i in range(0, 3):
                 obj.v_vek[i] += obj.a_vek[i] * dt
         vergangene_t += dt
+    print(result(anfangs_vek, objekte[1].pos))
 
 
 def output(data, output_file):
