@@ -2,21 +2,23 @@
 from engine_euler import *
 
 
-erde = Objekt(masse=5.9724 * ykg)
-mond = Objekt(masse=0.07346 * ykg, pos=np.array([0.3844 * mkm, 0., 0.]), v_vek=np.array([0., 1.022 * km, 0.]))
-
+sonne = Objekt(masse=1988500e24)
+erde = Objekt(masse=5.9724e24, pos=np.array([149.596e9, 0., 0.]), v_vek=np.array([0., 29.78e3, 0.]))
+# jupiter = Objekt(masse=1898.19e24, pos=np.array([778.570e9, 0., 0.]), v_vek=np.array([0., 13.06e3, 0.]))
 
 def main():
     import cProfile
     import pstats
 
     with cProfile.Profile() as pr:
-        simulation(60 * 10, 27.4 * 24 * 3600)
+        simulation(60 * 10, 365 * 24 * 3600)
 
     stats = pstats.Stats(pr)
     stats.sort_stats(pstats.SortKey.TIME)
     stats.print_stats()
     stats.dump_stats(filename='main.prof')
+
+    print('End')
 
 if __name__ == '__main__':
     main()
