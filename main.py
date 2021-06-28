@@ -11,12 +11,11 @@ def main():
     import pstats
 
     with cProfile.Profile() as pr:
-        simulation(30, 3 * 365 * 24 * 3600)
+        simulation(30, 1 * 365 * 24 * 3600, "Erde und Sonne")
 
     stats = pstats.Stats(pr)
     stats.sort_stats(pstats.SortKey.TIME)
     stats.print_stats()
-    stats.dump_stats(filename='main.prof')
 
     print('End')
 

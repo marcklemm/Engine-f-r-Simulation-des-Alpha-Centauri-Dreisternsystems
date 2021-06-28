@@ -1,1 +1,13 @@
-[]
+[
+    {
+    "Name":"Erde und Sonne",
+    "dt":30,
+    "t":31536000,
+    "exzentrizitaet":0.016855017638554817
+},{
+    "Name":"Erde und Sonne",
+    "dt":30,
+    "t":31536000,
+    "exzentrizitaet":0.016855017638554817
+}
+]
