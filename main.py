@@ -11,7 +11,7 @@ def main():
     import pstats
 
     with cProfile.Profile() as pr:
-        simulation(60 * 10, 365 * 24 * 3600)
+        simulation(30, 3 * 365 * 24 * 3600)
 
     stats = pstats.Stats(pr)
     stats.sort_stats(pstats.SortKey.TIME)
