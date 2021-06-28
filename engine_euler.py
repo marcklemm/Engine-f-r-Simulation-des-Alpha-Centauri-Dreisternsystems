@@ -1,6 +1,6 @@
 import numpy as np
 import json
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 '''Konstanten'''
 G = 6.67430e-11
@@ -9,12 +9,6 @@ G = 6.67430e-11
 """Funktionen"""
 def betrag(vek):
     return np.sqrt(np.sum(vek**2))
-
-
-'''Simulation'''
-# fig = plt.figure(figsize=(10, 10)) # für matplot Simulation
-
-objekte = [] # beinhaltet die zu simulierenden Objekte
 
 
 def exzentrizitaet(obj):
@@ -29,6 +23,13 @@ def output(data, output_file):
     with open(output_file, 'a') as log:
         json.dump(data, log, indent=len(data), separators=(',', ':'))
 
+'''Simulation'''
+fig = plt.figure(figsize=(10, 10)) # für matplot Simulation
+
+objekte = [] # beinhaltet die zu simulierenden Objekte
+
+
+
 
 class Objekt:
     def __init__(self, masse=1, pos=np.array([0., 0., 0.]), a_vek=np.array([0., 0., 0.]), v_vek=np.array([0., 0., 0.])):
@@ -36,13 +37,20 @@ class Objekt:
         self.pos = pos
         self.a_vek = a_vek
         self.v_vek = v_vek
-        self.coordinates = [[], [], []]
+        self.x = []
+        self.y = []
+        self.z = []
         self.abstand = []
-        # self.ax = fig.add_subplot(111, projection='3d')
+        self.ax = fig.add_subplot(111, projection='3d')
         objekte.append(self)
 
     def abstand_zu_stern(self):
         self.abstand.append(betrag(self.pos - objekte[0].pos))
+
+    def pos_update(self):
+        self.x.append(self.pos[0])
+        self.y.append(self.pos[1])
+        self.z.append(self.pos[2])
 
 
 def gravitation(obj1, obj2):
@@ -56,20 +64,18 @@ def simulation(dt, t, name=""):
     while vergangene_t <= t:
         for obj in objekte:
             obj.pos += obj.v_vek * dt + 0.5 * obj.a_vek * dt**2 # berechnet die Position aller Objekte
+            obj.pos_update()
             obj.v_vek += obj.a_vek * dt # berechnet die Geschwindigkeit der Objekte
-            for i in range(3):
-                obj.coordinates[i].append(objekte[1].pos[i])
             obj.abstand_zu_stern()
             for obj1 in objekte: # berechnet die Beschleunigungen der Objekte
                 for obj2 in objekte:
                     if obj1 != obj2:
                         gravitation(obj1, obj2)
         vergangene_t += dt
-    # for obj in objekte:
-        # obj.ax.scatter(obj.coordinates[0], obj.coordinates[1], obj.coordinates[2])
-    output({"Name": name, "dt": dt, "t": t, "exzentrizitaet": exzentrizitaet(objekte[1])}, 'log.json')
-    print(exzentrizitaet(objekte[1]))
-    # plt.show()
+    for obj in objekte:
+        obj.ax.scatter(obj.x, obj.y, obj.z)
+    output({"Name": name, "dt": dt, "t": t, "exzentrizitaet Erde": exzentrizitaet(objekte[1])}, 'log.json')
+    plt.show()
 
 
 
