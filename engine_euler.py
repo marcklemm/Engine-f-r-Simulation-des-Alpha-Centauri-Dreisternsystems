@@ -55,20 +55,23 @@ class Objekt:
         self.y += [r[1] for r in self.coordinates]
         self.z += [r[2] for r in self.coordinates]
 
-    def gravitation(self):
-        for obj in objekte:
-            if obj != self:
-                richtungs_vek = obj.r - self.r
+
+def gravitation():
+    for i, obj1 in enumerate(objekte):
+            for obj2 in objekte[i+1:]:
+                richtungs_vek = obj2.r - obj1.r
                 abstand = betrag(richtungs_vek)
-                self.a = G * obj.masse / abstand ** 3 * richtungs_vek
+                f = G * obj2.masse * obj1.masse / abstand ** 3 * richtungs_vek
+                obj1.a = f / obj1.masse
+                obj2.a = - f / obj2.masse
 
 
 def simulation(dt, t, name=""):
     vergangene_t = 0
     while vergangene_t <= t:
+        gravitation()  # berechnet die Beschleunigungen der Objekte
         for obj in objekte:
             obj.abstand_zu_stern()
-            obj.gravitation() # berechnet die Beschleunigungen der Objekte
             obj.r += obj.v * dt + 0.5 * obj.a * dt ** 2  # berechnet die Position aller Objekte
             obj.coordinates.append([r for r in obj.r])
             obj.v += obj.a * dt  # berechnet die Geschwindigkeit der Objekte

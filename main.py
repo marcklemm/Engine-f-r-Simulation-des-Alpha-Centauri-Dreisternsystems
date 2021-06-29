@@ -3,7 +3,7 @@ from engine_euler import *
 
 
 sonne = Objekt(masse=1988500e24)
-#erde = Objekt(masse=5.9724e24, r=np.array([147.092e9, 0., 0.]), v=np.array([0., 30.29e3, 0.]))
+erde = Objekt(masse=5.9724e24, r=np.array([147.092e9, 0., 0.]), v=np.array([0., 30.29e3, 0.]))
 mars = Objekt(masse=0.64171e24, r=np.array([-206.617e9, 0., 0.]), v=np.array([0., -26.50e3, 0.]))
 
 def main():
