@@ -8,7 +8,7 @@ G = 6.67430e-11
 
 """EInheiten"""
 yr = 365 * 24 * 3600
-
+d = 24 * 365
 
 """Funktionen"""
 def betrag(vek):
@@ -28,8 +28,8 @@ def output(data, output_file):
         json.dump(data, log, indent=len(data), separators=(',', ':'))
 
 '''Simulation'''
-fig = plt.figure(figsize=(10, 10)) # für matplot Simulation
-ax = fig.add_subplot(111)
+fig, ax = plt.subplots(figsize=(10, 10), tight_layout=True)
+
 
 objekte = [] # beinhaltet die zu simulierenden Objekte
 

@@ -9,15 +9,11 @@
     "dt":30,
     "t":31536000,
     "exzentrizitaet":0.016855017638554817
-}
-]{
-    "Name":"Sonne und Mars",
-    "dt":600,
-    "t":63072000,
-    "exzentrizitaet Mars":0.09337528469392581
-}{
+},
+    {
     "Name":"Sonne und Mars",
     "dt":600,
     "t":63072000,
     "exzentrizitaet Mars":0.09337528469392581
 }
+]
