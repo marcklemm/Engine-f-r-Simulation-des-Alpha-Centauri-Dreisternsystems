@@ -11,23 +11,13 @@
     "exzentrizitaet":0.016855017638554817
 }
 ]{
-    "Name":"Erde, Sonne und Jupiter",
+    "Name":"Sonne und Mars",
     "dt":600,
-    "t":31536000,
-    "exzentrizitaet Erde":0.01703640987212655
+    "t":63072000,
+    "exzentrizitaet Mars":0.09337528469392581
 }{
-    "Name":"Erde, Sonne und Jupiter",
+    "Name":"Sonne und Mars",
     "dt":600,
-    "t":31536000,
-    "exzentrizitaet Erde":0.01703640987212655
-}{
-    "Name":"Erde, Sonne und Jupiter",
-    "dt":600,
-    "t":31536000,
-    "exzentrizitaet Erde":0.01703640987212655
-}{
-    "Name":"Erde, Sonne und Jupiter",
-    "dt":600,
-    "t":31536000,
-    "exzentrizitaet Erde":0.735814193793477
+    "t":63072000,
+    "exzentrizitaet Mars":0.09337528469392581
 }
