@@ -49,31 +49,40 @@
     {
         "Name":"Sonne, Erde und Mars",
         "dt":600,
-        "t":8640000,
-        "Exzentrizitaet Erde":"0.004972089119058838"
+        "t":31536000,
+        "Exzentrizitaet Erde":"0.01703641108956577"
     },
     {
         "Name":"Sonne, Erde und Mars",
+        "dt":600,
+        "t":31536000,
+        "Exzentrizitaet Erde":"0.01703641108956577"
+    },
+    {
+        "Name":"Sonne, Erde und Mars",
+        "dt":600,
+        "t":31536000,
+        "Exzentrizitaet Erde":"0.01703641108956577"
+    },
+    {
+        "Name":"Sonne, Merkur, Venus, Erde, Mars",
         "dt":600,
         "t":63072000,
-        "Exzentrizitaet Erde":"0.35469824780317044"
+        "Exzentrizitaet Merkur":"0.21972267897894415",
+        "Exzentrizitaet Venus":"0.008320533338982385",
+        "Exzentrizitaet Erde":"0.017425700017767293",
+        "Exzentrizitaet Mars":"0.09336493147709723"
     },
     {
-        "Name":"Sonne, Erde und Mars",
+        "Name":"Merkur",
         "dt":600,
-        "t":31536000,
-        "Exzentrizitaet Erde":"0.2579101257124069"
+        "t":7568640.0,
+        "Exzentrizitaet Merkur":"0.2066951645119601"
     },
     {
-        "Name":"Sonne, Erde und Mars",
-        "dt":600,
-        "t":31536000,
-        "Exzentrizitaet Erde":"0.2579101257124069"
-    },
-    {
-        "Name":"Sonne, Erde und Mars",
-        "dt":30,
-        "t":31536000,
-        "Exzentrizitaet Erde":"0.8728036443843756"
+        "Name":"Merkur",
+        "dt":20,
+        "t":7568640.0,
+        "Exzentrizitaet Merkur":"0.205774993598322"
     }
 ]

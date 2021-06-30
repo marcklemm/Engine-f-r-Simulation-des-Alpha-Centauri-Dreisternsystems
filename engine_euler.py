@@ -50,20 +50,21 @@ class System:
 
     def simulation(self):
         vergangene_t = 0
-        fig = plt.figure(figsize=(10, 10), tight_layout=True)
-        ax = fig.add_subplot(projection='3d')
         while vergangene_t <= self.t:
             for obj in self.objekte:
                 obj.a = [0, 0, 0]
-                obj.r_aufteilen()
-                ax.scatter(obj.xs, obj.ys)
             self.gravitation()  # berechnet die Beschleunigungen der Objekte
             self.r_update()
             vergangene_t += self.dt
+        fig = plt.figure(figsize=(10, 10), tight_layout=True)
+        ax = fig.add_subplot(projection='3d')
+        for obj in self.objekte:
+            obj.r_aufteilen()
+            ax.scatter(obj.xs, obj.ys, obj.zs)
         data = {"Name": self.name, "dt": self.dt, "t": self.t}
         for obj in self.objekte[1:]:
             data[f'Exzentrizitaet {obj.obj_id}'] = f'{obj.exzentrizitaet()}'
-            data[f'Umlaufdauer {obj.obj_id}'] = f'{obj.umlaufdauer}'
+            #data[f'Umlaufdauer {obj.obj_id}'] = f'{obj.umlaufdauer}'
         self.output(data)
 
     def output(self, data):
@@ -97,6 +98,5 @@ class Objekt:
     def exzentrizitaet(self):
         apphelion = max(self.abstand)
         perihelion = min(self.abstand)
-        print(apphelion, perihelion)
         exzent = (apphelion - perihelion) / (apphelion + perihelion)
         return exzent
