@@ -19,7 +19,7 @@ class Objekt:
         self.v_vek = v_vek
         self.temp_pos = temp_pos
         self.temp_a_vek = temp_a_vek
-        objekte.append(self) # fügt Objekt in "objekte" ein
+        objekte.append(self) # fügt Objekt in "system" ein
 
     def zero(self):
         self.a_vek = [0, 0, 0]
