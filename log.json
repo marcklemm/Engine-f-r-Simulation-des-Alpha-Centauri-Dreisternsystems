@@ -1,88 +1,117 @@
 [
-    {
-        "Name":"Erde und Sonne",
-        "dt":30,
-        "t":31536000,
-        "exzentrizitaet":0.016855017638554817
-    },
-    {
-        "Name":"Erde und Sonne",
-        "dt":30,
-        "t":31536000,
-        "exzentrizitaet":0.016855017638554817
-    },
-    {
-        "Name":"Sonne und Mars",
-        "dt":600,
-        "t":63072000,
-        "exzentrizitaet Mars":0.09337528469392581
-    },
-    {
-        "Name":"Sonnensystem",
-        "dt":600,
-        "t":31536000,
-        "Exzentrizitaet Sonnte":"nan",
-        "Exzentrizitaet Erde":"0.01701540134483866",
-        "Exzentrizitaet Mars":"0.09328219469136961",
-        "Exzentrizitaet Merkur":"0.21233422036759012",
-        "Exzentrizitaet Venus":"0.007703824246530718",
-        "Exzentrizitaet Jupiter":"0.003891161512258146",
-        "Exzentrizitaet Saturn":"0.000640503590299553",
-        "Exzentrizitaet Uranus":"4.35446514645034e-05",
-        "Exzentrizitaet Neptun":"9.892843447912341e-06",
-        "Exzentrizitaet Pluto":"2.9144299028128574e-05"
-    },
-    {
-        "Name":"Sonne, Erde und Mars",
-        "dt":600,
-        "t":31536000,
-        "Exzentrizitaet Erde":"0.017034875349873874",
-        "Exzentrizitaet Mars":"0.09337583929100148"
-    },
-    {
-        "Name":"Sonne, Erde und Mars",
-        "dt":600,
-        "t":63072000,
-        "Exzentrizitaet Erde":"0.017414653924512292",
-        "Exzentrizitaet Mars":"0.09337583929100135"
-    },
-    {
-        "Name":"Sonne, Erde und Mars",
-        "dt":600,
-        "t":31536000,
-        "Exzentrizitaet Erde":"0.01703641108956577"
-    },
-    {
-        "Name":"Sonne, Erde und Mars",
-        "dt":600,
-        "t":31536000,
-        "Exzentrizitaet Erde":"0.01703641108956577"
-    },
-    {
-        "Name":"Sonne, Erde und Mars",
-        "dt":600,
-        "t":31536000,
-        "Exzentrizitaet Erde":"0.01703641108956577"
-    },
-    {
-        "Name":"Sonne, Merkur, Venus, Erde, Mars",
-        "dt":600,
-        "t":63072000,
-        "Exzentrizitaet Merkur":"0.21972267897894415",
-        "Exzentrizitaet Venus":"0.008320533338982385",
-        "Exzentrizitaet Erde":"0.017425700017767293",
-        "Exzentrizitaet Mars":"0.09336493147709723"
-    },
-    {
-        "Name":"Merkur",
-        "dt":600,
-        "t":7568640.0,
-        "Exzentrizitaet Merkur":"0.2066951645119601"
-    },
-    {
-        "Name":"Merkur",
-        "dt":20,
-        "t":7568640.0,
-        "Exzentrizitaet Merkur":"0.205774993598322"
-    }
+      {
+            "Name":"Erde und Sonne",
+            "dt":30,
+            "t":31536000,
+            "exzentrizitaet":0.016855017638554817
+      },
+      {
+            "Name":"Erde und Sonne",
+            "dt":30,
+            "t":31536000,
+            "exzentrizitaet":0.016855017638554817
+      },
+      {
+            "Name":"Sonne und Mars",
+            "dt":600,
+            "t":63072000,
+            "exzentrizitaet Mars":0.09337528469392581
+      },
+      {
+            "Name":"Sonnensystem",
+            "dt":600,
+            "t":31536000,
+            "Exzentrizitaet Sonnte":"nan",
+            "Exzentrizitaet Erde":"0.01701540134483866",
+            "Exzentrizitaet Mars":"0.09328219469136961",
+            "Exzentrizitaet Merkur":"0.21233422036759012",
+            "Exzentrizitaet Venus":"0.007703824246530718",
+            "Exzentrizitaet Jupiter":"0.003891161512258146",
+            "Exzentrizitaet Saturn":"0.000640503590299553",
+            "Exzentrizitaet Uranus":"4.35446514645034e-05",
+            "Exzentrizitaet Neptun":"9.892843447912341e-06",
+            "Exzentrizitaet Pluto":"2.9144299028128574e-05"
+      },
+      {
+            "Name":"Sonne, Erde und Mars",
+            "dt":600,
+            "t":31536000,
+            "Exzentrizitaet Erde":"0.017034875349873874",
+            "Exzentrizitaet Mars":"0.09337583929100148"
+      },
+      {
+            "Name":"Sonne, Erde und Mars",
+            "dt":600,
+            "t":63072000,
+            "Exzentrizitaet Erde":"0.017414653924512292",
+            "Exzentrizitaet Mars":"0.09337583929100135"
+      },
+      {
+            "Name":"Sonne, Erde und Mars",
+            "dt":600,
+            "t":31536000,
+            "Exzentrizitaet Erde":"0.01703641108956577"
+      },
+      {
+            "Name":"Sonne, Erde und Mars",
+            "dt":600,
+            "t":31536000,
+            "Exzentrizitaet Erde":"0.01703641108956577"
+      },
+      {
+            "Name":"Sonne, Erde und Mars",
+            "dt":600,
+            "t":31536000,
+            "Exzentrizitaet Erde":"0.01703641108956577"
+      },
+      {
+            "Name":"Sonne, Merkur, Venus, Erde, Mars",
+            "dt":600,
+            "t":63072000,
+            "Exzentrizitaet Merkur":"0.21972267897894415",
+            "Exzentrizitaet Venus":"0.008320533338982385",
+            "Exzentrizitaet Erde":"0.017425700017767293",
+            "Exzentrizitaet Mars":"0.09336493147709723"
+      },
+      {
+            "Name":"Merkur",
+            "dt":600,
+            "t":7568640.0,
+            "Exzentrizitaet Merkur":"0.2066951645119601"
+      },
+      {
+            "Name":"Merkur",
+            "dt":20,
+            "t":7568640.0,
+            "Exzentrizitaet Merkur":"0.205774993598322"
+      },
+      {
+            "Name":"test",
+            "dt":100,
+            "t":7568640.0,
+            "Exzentrizitaet Merkur":"0.2057961177970804"
+      },
+      {
+            "Name":"test",
+            "dt":100,
+            "t":7568640.0,
+            "Exzentrizitaet Merkur":"0.2057961177970804",
+            "Exzentrizitaet Venus":"0.0060448135115157035"
+      },
+      {
+            "Name":"test",
+            "dt":600,
+            "t":31536000,
+            "Exzentrizitaet Merkur":"0.2079547705040009",
+            "Exzentrizitaet Venus":"0.007109710452960813",
+            "Exzentrizitaet Erde":"0.016911143136669384"
+      },
+      {
+            "Name":"test",
+            "dt":600,
+            "t":94608000,
+            "Exzentrizitaet Merkur":"0.21295852135406373",
+            "Exzentrizitaet Venus":"0.00772166828132928",
+            "Exzentrizitaet Erde":"0.017164443476736554"
+      }
 ]

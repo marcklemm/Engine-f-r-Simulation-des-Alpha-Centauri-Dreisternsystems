@@ -1,7 +1,7 @@
 # Datei zur konfiguration der Simulation
-from engine_euler import *
+from engine_rk4 import *
 
-sonnensystem = System(100, 1 * yr, "test")
+sonnensystem = System(600, 3 * yr, "test")
 
 sonne = Objekt(masse=1988500e24)
 erde = Objekt(masse=5.9724e24, r=np.array([147.092e9, 0., 0.]), v=np.array([0., 30.29e3, 0.]), obj_id='Erde')

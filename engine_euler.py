@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 G = 6.67430e-11 # Gravitationskonstante
 pi = 3.1415926535 # Kreiszahl pi
 
-"""EInheiten"""
+"""Einheiten"""
 yr = 365 * 24 * 3600 # Jahr in Sekunden
 d = 24 * 365 # Tag in Sekunden
 
@@ -63,10 +63,10 @@ class System:
 
         vergangene_t = 0
 
-        while vergangene_t <= self.t: # die Simulation läuft, bis die Vergangene Zeit nicht mehr kleiner als die Gesamtzeit ist
+        while vergangene_t <= self.t:  # die Simulation läuft, bis die Vergangene Zeit nicht mehr kleiner als die Gesamtzeit ist
 
             self.gravitation()  # berechnet die Beschleunigungen der Objekte
-            self.r_update() # berechnet die Position der Objekte
+            self.r_update()  # berechnet die Position der Objekte
 
             vergangene_t += self.dt
 
@@ -77,11 +77,11 @@ class System:
             obj.r_aufteilen()
             ax.scatter(obj.xs, obj.ys, obj.zs)
 
-        data = {"Name": self.name, "dt": self.dt, "t": self.t} # erstellt die relevanten Daten im Json-Format
+        data = {"Name": self.name, "dt": self.dt, "t": self.t}  # erstellt die relevanten Daten im Json-Format
         for obj in self.objekte[1:]:
             data[f'Exzentrizitaet {obj.obj_id}'] = f'{obj.exzentrizitaet()}'
-            #data[f'Umlaufperiode {obj.obj_id}'] = f'{obj.umlaufperiode(self.objekte[0])/d}'
-        #self.output(data)
+            # data[f'Umlaufperiode {obj.obj_id}'] = f'{obj.umlaufperiode(self.objekte[0])/d}'
+        # self.output(data)
 
     # speichert die relevanten Daten in einer Json-Datei
     def output(self, data):
@@ -123,3 +123,4 @@ class Objekt:
     # berechnet die Umlaufperiode des Körpers
     def umlaufperiode(self, obj):
         return 2 * np.pi * np.sqrt(((max(self.abstand) + min(self.abstand)) / 2)**3 / (G * (self.masse + obj.masse)))
+
