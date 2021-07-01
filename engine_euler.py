@@ -4,7 +4,7 @@
 
 import numpy as np
 import json
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 '''Konstanten'''
 G = 6.67430e-11 # Gravitationskonstante
@@ -71,17 +71,17 @@ class System:
             vergangene_t += self.dt
 
         """Für die Visualisierung mit matplotlib.pyplot"""
-        fig = plt.figure(figsize=(10, 10), tight_layout=True)
-        ax = fig.add_subplot(projection='3d')
-        for obj in self.objekte:
-            obj.r_aufteilen()
-            ax.scatter(obj.xs, obj.ys, obj.zs)
+        #fig = plt.figure(figsize=(10, 10), tight_layout=True)
+        #ax = fig.add_subplot(projection='3d')
+        #for obj in self.objekte:
+        #    obj.r_aufteilen()
+        #    ax.scatter(obj.xs, obj.ys, obj.zs)
 
         data = {"Name": self.name, "dt": self.dt, "t": self.t}  # erstellt die relevanten Daten im Json-Format
         for obj in self.objekte[1:]:
             data[f'Exzentrizitaet {obj.obj_id}'] = f'{obj.exzentrizitaet()}'
             # data[f'Umlaufperiode {obj.obj_id}'] = f'{obj.umlaufperiode(self.objekte[0])/d}'
-        # self.output(data)
+        self.output(data)
 
     # speichert die relevanten Daten in einer Json-Datei
     def output(self, data):
