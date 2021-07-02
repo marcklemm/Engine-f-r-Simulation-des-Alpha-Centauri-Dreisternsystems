@@ -1,7 +1,7 @@
 # Datei zur konfiguration der Simulation
 from engine_rk4 import *
 
-sonnensystem = System(600, 3 * yr, "Sonnensystem mit Pluto")
+sonnensystem = System(600, 42 * yr, "Sonnensystem mit Pluto")
 
 sonne = Objekt(masse=1988500e24)
 erde = Objekt(masse=5.9724e24, r=np.array([147.092e9, 0., 0.]), v=np.array([0., 30.29e3, 0.]), obj_id='Erde')
@@ -30,7 +30,7 @@ def main():
     stats.print_stats(10)
 
     print('End')
-    #plt.show()
+    plt.show()
 
 
 if __name__ == '__main__':

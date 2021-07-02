@@ -172,6 +172,51 @@
                         "Exzentrizitaet Uranus":"0.0006326723147898459",
                         "Exzentrizitaet Neptun":"4.393279881644237e-05",
                         "Exzentrizitaet Pluto":"0.0001848055974665182",
-                        "runtime": "89.708 s"
+                        "runtime":"89.708 s"
+            },
+            {
+                        "Name":"Sonnensystem mit Pluto",
+                        "dt":3600,
+                        "t":1324512000,
+                        "Exzentrizitaet Merkur":"0.4731651250046491",
+                        "Exzentrizitaet Venus":"0.07372058536660726",
+                        "Exzentrizitaet Erde":"0.04560380894302763",
+                        "Exzentrizitaet Mars":"0.10243133516057504",
+                        "Exzentrizitaet Jupiter":"0.0505318625938634",
+                        "Exzentrizitaet Saturn":"0.05614556131030317",
+                        "Exzentrizitaet Uranus":"0.04415625305806744",
+                        "Exzentrizitaet Neptun":"0.006798161443424526",
+                        "Exzentrizitaet Pluto":"0.036959081059199095",
+                        "runtime":"277.390 s"
+            },
+            {
+                        "Name":"Sonnensystem mit Pluto",
+                        "dt":1200,
+                        "t":1324512000,
+                        "Exzentrizitaet Merkur":"0.3476220171114616",
+                        "Exzentrizitaet Venus":"0.03255644433733193",
+                        "Exzentrizitaet Erde":"0.026957494778947738",
+                        "Exzentrizitaet Mars":"0.09634865179557572",
+                        "Exzentrizitaet Jupiter":"0.050378719646128584",
+                        "Exzentrizitaet Saturn":"0.056136725289606275",
+                        "Exzentrizitaet Uranus":"0.04415316314629543",
+                        "Exzentrizitaet Neptun":"0.006797733755716008",
+                        "Exzentrizitaet Pluto":"0.036959077754942546",
+                        "runtime":"824.742 s"
+            },
+            {
+                        "Name":"Sonnensystem mit Pluto",
+                        "dt":600,
+                        "t":1324512000,
+                        "Exzentrizitaet Merkur":"0.2911050515723265",
+                        "Exzentrizitaet Venus":"0.02012456389011579",
+                        "Exzentrizitaet Erde":"0.022065374904527556",
+                        "Exzentrizitaet Mars":"0.09481110727041427",
+                        "Exzentrizitaet Jupiter":"0.050340414083111226",
+                        "Exzentrizitaet Saturn":"0.0561345244361754",
+                        "Exzentrizitaet Uranus":"0.04415239160842794",
+                        "Exzentrizitaet Neptun":"0.006797626396164978",
+                        "Exzentrizitaet Pluto":"0.03695907743726491",
+                        "runtime": "1671.043 s"
             }
 ]
