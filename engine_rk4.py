@@ -12,7 +12,7 @@ pi = 3.1415926535 # Kreiszahl pi
 
 """Einheiten"""
 yr = 365 * 24 * 3600 # Jahr in Sekunden
-d = 24 * 365 # Tag in Sekunden
+d = 24 * 3600 # Tag in Sekunden
 
 """Funktionen"""
 def betrag(vek): # berechnet Betrag eines Vektors (Numpy Array)
@@ -42,8 +42,20 @@ class System:
             if obj != obj1: # die Berechnung wird durchgeführt, wenn das Objekt sich nicht mit sich selber vergleicht
                 richtungs_vek = obj.r - r # berechnet den Richtungsvektor zwischen r und obj.r
                 differenz = betrag(richtungs_vek) # berechnet den Abstand zwischen r und obj.r
-                if i == 0: # wenn das Objekt, welches verglichen wird, der Stern ist, wird der Abstand dazu gespeichert
-                    obj1.abstand.append(differenz)
+
+                # ändert Apsis und Perapsis + Halbachse
+                if i == 0:
+                    if obj1.perihel == 0:
+                        obj1.perihel = differenz
+                        obj1.semi_ax_up()
+                    if differenz <= obj1.perihel:
+                        obj1.perihel = differenz
+                        obj1.semi_ax_up()
+                    if differenz >= obj1.apphel:
+                        obj1.apphel = differenz
+                        obj1.semi_ax_up()
+
+
                 return G * obj.masse / differenz ** 3 * richtungs_vek # die Beschleunigung wird berechnet
 
     # berechnet die Geschwindigkeit, sowie die Position der Körper nach dem Runge-Kutta-Verfahren 4. Ordnung
@@ -85,7 +97,8 @@ class System:
         data = {"Name": self.name, "dt": self.dt, "t": self.t}  # erstellt die relevanten Daten im Json-Format
         for obj in self.objekte[1:]:
             data[f'Exzentrizitaet {obj.obj_id}'] = f'{obj.exzentrizitaet()}'
-            # data[f'Umlaufperiode {obj.obj_id}'] = f'{obj.umlaufperiode(self.objekte[0])/d}'
+            data[f'Halbachse {obj.obj_id}'] = f'{obj.semi_ax}'
+            data[f'Umlaufperiode {obj.obj_id}'] = f'{obj.umlaufperiode(self.objekte[0])/d}'
         self.output(data)
 
     # speichert die relevanten Daten in einer Json-Datei
@@ -104,13 +117,15 @@ class Objekt:
         self.a = a # die Beschleunigung des Körpers
         self.v = v # die Geschwindigkeit des Körpers
         self.r = r # die Position des Körpers
+        self.semi_ax = betrag(self.r) # die Apheldistanz
         self.obj_id = obj_id # zur Identifikation des Körpers
 
         self.koordinaten = [] # alle Koordinaten wärend der Simulation des Objekts
         self.xs = [] # alle x-Koordinaten
         self.ys = [] # alle y-Koordinaten
         self.zs = [] # alle z-Koordinaten
-        self.abstand = [] # alle Abstände zwischen Körper und Stern
+        self.apphel = 0 # die Appheldistanz
+        self.perihel = 0 # die Periheldistanz
 
     # teilt die Koordinaten auf
     def r_aufteilen(self):
@@ -120,12 +135,13 @@ class Objekt:
 
     # berechnet die Exzentrizität der Umlaufbahn des Körpers
     def exzentrizitaet(self):
-        apphelion = max(self.abstand) # berechnet den längsten Abstand des Körpers auf der Umlaufbahn um den Stern
-        perihelion = min(self.abstand) # berechnet den kürzesten Abstand des Körpers auf der Umlaufbahn um den Stern
-        exzent = (apphelion - perihelion) / (apphelion + perihelion) # berechnet die Exzentrizität
+        exzent = (self.apphel - self.perihel) / (self.apphel + self.perihel) # berechnet die Exzentrizität
         return exzent
+
+    def semi_ax_up(self):
+        self.semi_ax = (self.apphel + self.perihel) / 2
 
     # berechnet die Umlaufperiode des Körpers
     def umlaufperiode(self, obj):
-        return 2 * np.pi * np.sqrt(((max(self.abstand) + min(self.abstand)) / 2)**3 / (G * (self.masse + obj.masse)))
+        return 2 * np.pi * np.sqrt(self.semi_ax**3 / (G * (obj.masse + self.masse)))
 

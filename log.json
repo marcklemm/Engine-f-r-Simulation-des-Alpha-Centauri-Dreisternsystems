@@ -217,6 +217,34 @@
                         "Exzentrizitaet Uranus":"0.04415239160842794",
                         "Exzentrizitaet Neptun":"0.006797626396164978",
                         "Exzentrizitaet Pluto":"0.03695907743726491",
-                        "runtime": "1671.043 s"
+                        "runtime":"1671.043 s"
+            },
+            {
+                        "Name":"Sonnensystem mit Pluto",
+                        "dt":600,
+                        "t":31536000,
+                        "Exzentrizitaet Merkur":"0.2079547705040009",
+                        "Exzentrizitaet Venus":"0.007109710452960813",
+                        "Exzentrizitaet Erde":"0.016911143136669384",
+                        "Exzentrizitaet Mars":"0.09330268237668617",
+                        "Exzentrizitaet Jupiter":"0.0039475112847621435",
+                        "Exzentrizitaet Saturn":"0.0007441993639791456",
+                        "Exzentrizitaet Uranus":"7.068095674237045e-05",
+                        "Exzentrizitaet Neptun":"4.887248075402101e-06",
+                        "Exzentrizitaet Pluto":"2.053212294305202e-05"
+            },
+            {
+                        "Name":"Sonnensystem mit Pluto",
+                        "dt":600,
+                        "t":31536000,
+                        "Exzentrizitaet Merkur":"0.2079547705040009",
+                        "Halbachse Merkur":"58080013672.58649",
+                        "Umlaufperiode Merkur":"88.35690508229504",
+                        "Exzentrizitaet Venus":"0.007109710452960813",
+                        "Halbachse Venus":"108245594319.90329",
+                        "Umlaufperiode Venus":"224.80982044288712",
+                        "Exzentrizitaet Erde":"0.016911143136669384",
+                        "Halbachse Erde":"149622283582.71588",
+                        "Umlaufperiode Erde":"365.3374830203628"
             }
 ]
