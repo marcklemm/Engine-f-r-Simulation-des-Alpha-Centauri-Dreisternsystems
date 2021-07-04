@@ -18,8 +18,9 @@ d = 24 * 3600 # Tag in Sekunden
 def betrag(vek): # berechnet Betrag eines Vektors (Numpy Array)
     return np.sqrt(sum(vek**2))
 
-
 '''Simulation'''
+fig = plt.figure(figsize=(10, 10), tight_layout=True)
+ax = fig.add_subplot()
 
 # System, in welchem sich die Körper bewegen
 class System:
@@ -30,6 +31,8 @@ class System:
         self.t = t # Gesamtzeit der Simulation
         self.name = name # Name zur Identifikation der Simulation
         self.output_file = output_file # Datei, in welche relevante Informationen über die Simulation gespeichert werden
+        self.vergangene_t = 0
+        self.schritt = np.arange(0, self.t, self.t // self.dt)
 
     # fügt alle Körper, welche für die Simulation verwendet werden sollen zum System hinzu
     def objekt_hinzu(self, *args):
@@ -76,39 +79,46 @@ class System:
             obj.r += (1/6) * (k0 + 2 * k1 + 2 * k2 + k3) # ändert die berechnete Position des Körpers
             obj.v += (1/6) * (l0 + 2 * l1 + 2 * l2 + l3) # ändert die berechnete Geschwindigkeit des Körpers
 
-            obj.koordinaten.append(obj.r.tolist()) # speichert die Position des Körpers
-
-    # die Simulation des Systems
-    def simulation(self):
-
-        vergangene_t = 0
-
-        while vergangene_t <= self.t:  # die Simulation läuft, bis die Vergangene Zeit nicht mehr kleiner als die Gesamtzeit ist
-            self.r_update_rk4()  # berechnet die Position der Objekte
-            vergangene_t += self.dt
-
-        """Für die Visualisierung mit matplotlib.pyplot"""
-        fig = plt.figure(figsize=(10, 10), tight_layout=True)
-        ax = fig.add_subplot(projection='3d')
-        for obj in self.objekte:
-            obj.r_aufteilen()
-            ax.scatter(obj.xs, obj.ys, obj.zs)
-
-        data = {"Name": self.name, "dt": self.dt, "t": self.t}  # erstellt die relevanten Daten im Json-Format
-        for obj in self.objekte[1:]:
-            data[f'Exzentrizitaet {obj.obj_id}'] = f'{obj.exzentrizitaet()}'
-            data[f'Halbachse {obj.obj_id}'] = f'{obj.semi_ax}'
-            data[f'Umlaufperiode {obj.obj_id}'] = f'{obj.umlaufperiode(self.objekte[0])/d}'
-        self.output(data)
+            if self.vergangene_t in self.schritt:
+                koor = obj.r.tolist()
+                x, y, z = koor
+                obj.xs.append(x)
+                obj.ys.append(y)
+                obj.zs.append(z)
 
     # speichert die relevanten Daten in einer Json-Datei
-    def output(self, data):
+    def output(self):
+        data = {"Name": self.name, "dt": self.dt, "t": self.t}  # erstellt die relevanten Daten im Json-Format
+        for obj in self.objekte[1:]:
+            data[f'{obj.obj_id}'] = {'Exzentrizitaet': f'{obj.exzentrizitaet()}', 'Halbachse': f'{obj.semi_a}',
+                                     'Umlaufdauer': f'{obj.umlaufperiode(self.objekte[0]) / d}'}
         with open(self.output_file, 'r+') as log: # öffnet die Datei
             content = json.load(log) # lädt den Inhalt der Datei
             content.append(data) # fügt die Daten in den Inhalt ein
             log.seek(0) # geht an den Anfang der Datei
             json.dump(content, separators=(',', ':'), fp=log, indent=len(data)) # fügt Inhalt zur Datei hinzu
             log.truncate() # löscht die alten Daten der Datei
+
+    # speichert die nötigen Koordinaten in .txt datei
+    def output_r(self):
+        for obj in self.objekte:
+            data = {"x": obj.xs, "y": obj.ys, "z": obj.zs}
+            with open(f'{obj.obj_id}.txt', 'a') as f:
+                json.dump(data, f, indent=len(data))
+
+    # die Simulation des Systems
+    def simulation(self):
+        self.vergangene_t = 0
+        while self.vergangene_t <= self.t:  # die Simulation läuft, bis die Vergangene Zeit nicht mehr kleiner als die Gesamtzeit ist
+            self.r_update_rk4()  # berechnet die Position der Objekte
+            self.vergangene_t += self.dt
+
+        for obj in self.objekte:
+            ax.scatter(obj.xs, obj.ys)
+
+        self.output()
+        self.output_r()
+
 
 # Blueprint für ein Körper
 class Objekt:
@@ -117,31 +127,25 @@ class Objekt:
         self.a = a # die Beschleunigung des Körpers
         self.v = v # die Geschwindigkeit des Körpers
         self.r = r # die Position des Körpers
-        self.semi_ax = betrag(self.r) # die Apheldistanz
+        self.semi_a = betrag(self.r) # die Apheldistanz
         self.obj_id = obj_id # zur Identifikation des Körpers
 
-        self.koordinaten = [] # alle Koordinaten wärend der Simulation des Objekts
         self.xs = [] # alle x-Koordinaten
         self.ys = [] # alle y-Koordinaten
         self.zs = [] # alle z-Koordinaten
         self.apphel = 0 # die Appheldistanz
         self.perihel = 0 # die Periheldistanz
 
-    # teilt die Koordinaten auf
-    def r_aufteilen(self):
-        self.xs = [r[0] for r in self.koordinaten]
-        self.ys = [r[1] for r in self.koordinaten]
-        self.zs = [r[2] for r in self.koordinaten]
-
     # berechnet die Exzentrizität der Umlaufbahn des Körpers
     def exzentrizitaet(self):
         exzent = (self.apphel - self.perihel) / (self.apphel + self.perihel) # berechnet die Exzentrizität
         return exzent
 
+    # berechnet die grosse Halbachse
     def semi_ax_up(self):
-        self.semi_ax = (self.apphel + self.perihel) / 2
+        self.semi_a = (self.apphel + self.perihel) / 2
 
     # berechnet die Umlaufperiode des Körpers
     def umlaufperiode(self, obj):
-        return 2 * np.pi * np.sqrt(self.semi_ax**3 / (G * (obj.masse + self.masse)))
+        return 2 * np.pi * np.sqrt(self.semi_a ** 3 / (G * (obj.masse + self.masse)))
 

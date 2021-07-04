@@ -1,9 +1,9 @@
 # Datei zur konfiguration der Simulation
 from engine_rk4 import *
 
-sonnensystem = System(600, 1 * yr, "Sonnensystem mit Pluto")
+sonnensystem = System(600, .5 * yr, "Sonnensystem mit Pluto")
 
-sonne = Objekt(masse=1988500e24)
+sonne = Objekt(masse=1988500e24, obj_id='Sonne')
 erde = Objekt(masse=5.9724e24, r=np.array([147.092e9, 0., 0.]), v=np.array([0., 30.29e3, 0.]), obj_id='Erde')
 mars = Objekt(masse=0.64171e24, r=np.array([206.617e9, 0., 0.]), v=np.array([0., 26.50e3, 0.]), obj_id='Mars')
 merkur = Objekt(masse=0.33011e24, r=np.array([46.002e9, 0., 0.]), v=np.array([0., 58.98e3, 0.]), obj_id='Merkur')
@@ -14,7 +14,7 @@ uranus = Objekt(masse=86.813e24, r=np.array([2741.302e9, 0., 0.]), v=np.array([0
 neptun = Objekt(masse=102.413e24, r=np.array([4444.449e9, 0., 0.]), v=np.array([0., 5.50e3, 0.]), obj_id='Neptun')
 pluto = Objekt(masse=0.01303e24, r=np.array([7304.326e9, 0., 0.]), v=np.array([0., 3.71e3, 0.]), obj_id='Pluto')
 
-sonnensystem.objekt_hinzu(sonne, merkur, venus, erde)
+sonnensystem.objekt_hinzu(sonne,merkur, venus, erde, mars, jupiter)
 
 
 def main():
