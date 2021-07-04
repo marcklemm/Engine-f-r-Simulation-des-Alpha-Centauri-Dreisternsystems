@@ -101,10 +101,10 @@ class System:
 
     # speichert die nötigen Koordinaten in .txt datei
     def output_r(self):
-        for obj in self.objekte:
-            data = {"x": obj.xs, "y": obj.ys, "z": obj.zs}
-            with open(f'{obj.obj_id}.txt', 'a') as f:
-                json.dump(data, f, indent=len(data))
+        with open('test.txt', 'a') as f:
+            for obj in self.objekte:
+                data = {"x": obj.xs, "y": obj.ys, "z": obj.zs}
+                    json.dump(data, f)
 
     # die Simulation des Systems
     def simulation(self):
