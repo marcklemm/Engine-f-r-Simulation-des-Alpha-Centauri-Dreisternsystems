@@ -32,7 +32,7 @@ class System:
         self.name = name # Name zur Identifikation der Simulation
         self.output_file = output_file # Datei, in welche relevante Informationen über die Simulation gespeichert werden
         self.vergangene_t = 0
-        self.schritt = np.arange(0, self.t, self.t // self.dt)
+        self.schritt = np.arange(0, self.t, self.t // 1000)
 
     # fügt alle Körper, welche für die Simulation verwendet werden sollen zum System hinzu
     def objekt_hinzu(self, *args):
@@ -101,11 +101,11 @@ class System:
 
     # speichert die nötigen Koordinaten in .txt datei
     def output_r(self):
-        with open('test.txt', 'a') as f:
-            data = {}
+        with open('test2.txt', 'a') as f:
             for obj in self.objekte:
+                data = dict()
                 data[f'{obj.obj_id}'] = {"x": obj.xs, "y": obj.ys, "z": obj.zs}
-            json.dump(data, f, indent=len(data))
+                json.dump(data, f, indent=len(data))
 
     # die Simulation des Systems
     def simulation(self):
