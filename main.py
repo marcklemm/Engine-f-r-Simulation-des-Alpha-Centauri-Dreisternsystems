@@ -1,6 +1,6 @@
 # Datei zur konfiguration der Simulation
 from engine_rk4 import *
-
+"""
 sonnensystem = System(600, 1 * yr, "Sonnensystem mit Pluto", print_genauigkeit=1)
 
 sonne = Objekt(masse=1988500e24, obj_id='Sonne')
@@ -15,14 +15,23 @@ neptun = Objekt(masse=102.413e24, r=np.array([4444.449e9, 0., 0.]), v=np.array([
 pluto = Objekt(masse=0.01303e24, r=np.array([7304.326e9, 0., 0.]), v=np.array([0., 3.71e3, 0.]), obj_id='Pluto')
 
 sonnensystem.objekt_hinzu(sonne,merkur, venus, erde, mars, jupiter)
+"""
 
+alpha_centauri = System(600, 1 * yr, "Test Alpha Centauri", print_genauigkeit=100)
+
+alpha_centauri_a = Objekt(masse=1.0788 * 1988500e24, v=np.array([0., -0., 0.]), obj_id="Alpha Centauri A")
+alpha_centauri_b = Objekt(masse=0.9092 * 1988500e24, r=np.array([6.06287e13, 0., 0.]), v=np.array([0., 0., 0.]), obj_id="Alpha Centauri A")
+proxima_centauri = Objekt()
+
+alpha_centauri.objekt_hinzu(alpha_centauri_a, alpha_centauri_b)
 
 def main():
     import cProfile
     import pstats
 
     with cProfile.Profile() as pr:
-        sonnensystem.simulation()
+        alpha_centauri.simulation()
+        #sonnensystem.simulation()
 
     stats = pstats.Stats(pr)
     stats.sort_stats(pstats.SortKey.TIME)
