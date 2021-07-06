@@ -25,14 +25,20 @@ ax = fig.add_subplot()
 # System, in welchem sich die Körper bewegen
 class System:
 
-    def __init__(self, dt, t, name, output_file="log.json"):
+    def __init__(self, dt, t, name, print_genauigkeit, output_file="log.json", output_koords='koordinaten.txt'):
         self.objekte = [] # enthält alle Körper, welche sich im System befinden
         self.dt = dt # Zeitintervall
         self.t = t # Gesamtzeit der Simulation
         self.name = name # Name zur Identifikation der Simulation
         self.output_file = output_file # Datei, in welche relevante Informationen über die Simulation gespeichert werden
+        self.output_koords = output_koords
+        self.print_genauigkeit = print_genauigkeit
         self.vergangene_t = 0
-        self.schritt = np.arange(0, self.t, self.t // 1000)
+        if print_genauigkeit and print_genauigkeit > 1:
+            schritt = np.arange(0, self.t + self.dt, self.dt, dtype='int')
+            self.schritt = [x for i, x in enumerate(schritt) if i % (len(schritt) // (self.print_genauigkeit-1)) == 0]
+        else:
+            self.schritt = np.arange(0, self.t + self.dt, self.dt, dtype='int')
 
     # fügt alle Körper, welche für die Simulation verwendet werden sollen zum System hinzu
     def objekt_hinzu(self, *args):
@@ -101,7 +107,7 @@ class System:
 
     # speichert die nötigen Koordinaten in .txt datei
     def output_r(self):
-        with open('test2.txt', 'a') as f:
+        with open(self.output_koords, 'a') as f:
             data = {}
             for obj in self.objekte:
                 data[f'{obj.obj_id}'] = {"x": obj.xs, "y": obj.ys, "z": obj.zs}
