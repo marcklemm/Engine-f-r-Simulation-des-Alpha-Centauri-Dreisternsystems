@@ -1,986 +1,1356 @@
 [
-        {
-                "Name":"Erde und Sonne",
-                "dt":30,
-                "t":31536000,
-                "exzentrizitaet":0.016855017638554817
+    {
+        "Name":"Erde und Sonne",
+        "dt":30,
+        "t":31536000,
+        "exzentrizitaet":0.016855017638554817
+    },
+    {
+        "Name":"Erde und Sonne",
+        "dt":30,
+        "t":31536000,
+        "exzentrizitaet":0.016855017638554817
+    },
+    {
+        "Name":"Sonne und Mars",
+        "dt":600,
+        "t":63072000,
+        "exzentrizitaet Mars":0.09337528469392581
+    },
+    {
+        "Name":"Sonnensystem",
+        "dt":600,
+        "t":31536000,
+        "Exzentrizitaet Sonnte":"nan",
+        "Exzentrizitaet Erde":"0.01701540134483866",
+        "Exzentrizitaet Mars":"0.09328219469136961",
+        "Exzentrizitaet Merkur":"0.21233422036759012",
+        "Exzentrizitaet Venus":"0.007703824246530718",
+        "Exzentrizitaet Jupiter":"0.003891161512258146",
+        "Exzentrizitaet Saturn":"0.000640503590299553",
+        "Exzentrizitaet Uranus":"4.35446514645034e-05",
+        "Exzentrizitaet Neptun":"9.892843447912341e-06",
+        "Exzentrizitaet Pluto":"2.9144299028128574e-05"
+    },
+    {
+        "Name":"Sonne, Erde und Mars",
+        "dt":600,
+        "t":31536000,
+        "Exzentrizitaet Erde":"0.017034875349873874",
+        "Exzentrizitaet Mars":"0.09337583929100148"
+    },
+    {
+        "Name":"Sonne, Erde und Mars",
+        "dt":600,
+        "t":63072000,
+        "Exzentrizitaet Erde":"0.017414653924512292",
+        "Exzentrizitaet Mars":"0.09337583929100135"
+    },
+    {
+        "Name":"Sonne, Erde und Mars",
+        "dt":600,
+        "t":31536000,
+        "Exzentrizitaet Erde":"0.01703641108956577"
+    },
+    {
+        "Name":"Sonne, Erde und Mars",
+        "dt":600,
+        "t":31536000,
+        "Exzentrizitaet Erde":"0.01703641108956577"
+    },
+    {
+        "Name":"Sonne, Erde und Mars",
+        "dt":600,
+        "t":31536000,
+        "Exzentrizitaet Erde":"0.01703641108956577"
+    },
+    {
+        "Name":"Sonne, Merkur, Venus, Erde, Mars",
+        "dt":600,
+        "t":63072000,
+        "Exzentrizitaet Merkur":"0.21972267897894415",
+        "Exzentrizitaet Venus":"0.008320533338982385",
+        "Exzentrizitaet Erde":"0.017425700017767293",
+        "Exzentrizitaet Mars":"0.09336493147709723"
+    },
+    {
+        "Name":"Merkur",
+        "dt":600,
+        "t":7568640.0,
+        "Exzentrizitaet Merkur":"0.2066951645119601"
+    },
+    {
+        "Name":"Merkur",
+        "dt":20,
+        "t":7568640.0,
+        "Exzentrizitaet Merkur":"0.205774993598322"
+    },
+    {
+        "Name":"test",
+        "dt":100,
+        "t":7568640.0,
+        "Exzentrizitaet Merkur":"0.2057961177970804"
+    },
+    {
+        "Name":"test",
+        "dt":100,
+        "t":7568640.0,
+        "Exzentrizitaet Merkur":"0.2057961177970804",
+        "Exzentrizitaet Venus":"0.0060448135115157035"
+    },
+    {
+        "Name":"test",
+        "dt":600,
+        "t":31536000,
+        "Exzentrizitaet Merkur":"0.2079547705040009",
+        "Exzentrizitaet Venus":"0.007109710452960813",
+        "Exzentrizitaet Erde":"0.016911143136669384"
+    },
+    {
+        "Name":"test",
+        "dt":600,
+        "t":94608000,
+        "Exzentrizitaet Merkur":"0.21295852135406373",
+        "Exzentrizitaet Venus":"0.00772166828132928",
+        "Exzentrizitaet Erde":"0.017164443476736554"
+    },
+    {
+        "Name":"test engine_rk4 mit matplot",
+        "dt":600,
+        "t":94608000,
+        "Exzentrizitaet Merkur":"0.21295852135406373",
+        "Exzentrizitaet Venus":"0.00772166828132928",
+        "Exzentrizitaet Erde":"0.017164443476736554",
+        "Exzentrizitaet Mars":"0.09337468877709303",
+        "Exzentrizitaet Jupiter":"0.02736522008774695",
+        "Exzentrizitaet Saturn":"0.0063916188394908926",
+        "Exzentrizitaet Uranus":"0.0006326723147898459",
+        "Exzentrizitaet Neptun":"4.393279881644237e-05",
+        "Exzentrizitaet Pluto":"0.0001848055974665182",
+        "runtime":"96.934s"
+    },
+    {
+        "Name":"test engine_euler mit matplot",
+        "dt":600,
+        "t":94608000,
+        "Exzentrizitaet Merkur":"0.22695622473950358",
+        "Exzentrizitaet Venus":"0.009518897817371759",
+        "Exzentrizitaet Erde":"0.01779995483810454",
+        "Exzentrizitaet Mars":"0.0935034091564546",
+        "Exzentrizitaet Jupiter":"0.026847157152155274",
+        "Exzentrizitaet Saturn":"0.00565944384397826",
+        "Exzentrizitaet Uranus":"0.0004161564063542221",
+        "Exzentrizitaet Neptun":"6.939365168300018e-05",
+        "Exzentrizitaet Pluto":"0.0002486419492476008",
+        "runtime":"112.164 s"
+    },
+    {
+        "Name":"test engine_euler ohne matplot",
+        "dt":600,
+        "t":94608000,
+        "Exzentrizitaet Merkur":"0.22695622473950358",
+        "Exzentrizitaet Venus":"0.009518897817371759",
+        "Exzentrizitaet Erde":"0.01779995483810454",
+        "Exzentrizitaet Mars":"0.0935034091564546",
+        "Exzentrizitaet Jupiter":"0.026847157152155274",
+        "Exzentrizitaet Saturn":"0.00565944384397826",
+        "Exzentrizitaet Uranus":"0.0004161564063542221",
+        "Exzentrizitaet Neptun":"6.939365168300018e-05",
+        "Exzentrizitaet Pluto":"0.0002486419492476008",
+        "runtime":"104.618 s"
+    },
+    {
+        "Name":"test engine_rk4 ohne matplot",
+        "dt":600,
+        "t":94608000,
+        "Exzentrizitaet Merkur":"0.21295852135406373",
+        "Exzentrizitaet Venus":"0.00772166828132928",
+        "Exzentrizitaet Erde":"0.017164443476736554",
+        "Exzentrizitaet Mars":"0.09337468877709303",
+        "Exzentrizitaet Jupiter":"0.02736522008774695",
+        "Exzentrizitaet Saturn":"0.0063916188394908926",
+        "Exzentrizitaet Uranus":"0.0006326723147898459",
+        "Exzentrizitaet Neptun":"4.393279881644237e-05",
+        "Exzentrizitaet Pluto":"0.0001848055974665182",
+        "runtime":"89.708 s"
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":3600,
+        "t":1324512000,
+        "Exzentrizitaet Merkur":"0.4731651250046491",
+        "Exzentrizitaet Venus":"0.07372058536660726",
+        "Exzentrizitaet Erde":"0.04560380894302763",
+        "Exzentrizitaet Mars":"0.10243133516057504",
+        "Exzentrizitaet Jupiter":"0.0505318625938634",
+        "Exzentrizitaet Saturn":"0.05614556131030317",
+        "Exzentrizitaet Uranus":"0.04415625305806744",
+        "Exzentrizitaet Neptun":"0.006798161443424526",
+        "Exzentrizitaet Pluto":"0.036959081059199095",
+        "runtime":"277.390 s"
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":1200,
+        "t":1324512000,
+        "Exzentrizitaet Merkur":"0.3476220171114616",
+        "Exzentrizitaet Venus":"0.03255644433733193",
+        "Exzentrizitaet Erde":"0.026957494778947738",
+        "Exzentrizitaet Mars":"0.09634865179557572",
+        "Exzentrizitaet Jupiter":"0.050378719646128584",
+        "Exzentrizitaet Saturn":"0.056136725289606275",
+        "Exzentrizitaet Uranus":"0.04415316314629543",
+        "Exzentrizitaet Neptun":"0.006797733755716008",
+        "Exzentrizitaet Pluto":"0.036959077754942546",
+        "runtime":"824.742 s"
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":1324512000,
+        "Exzentrizitaet Merkur":"0.2911050515723265",
+        "Exzentrizitaet Venus":"0.02012456389011579",
+        "Exzentrizitaet Erde":"0.022065374904527556",
+        "Exzentrizitaet Mars":"0.09481110727041427",
+        "Exzentrizitaet Jupiter":"0.050340414083111226",
+        "Exzentrizitaet Saturn":"0.0561345244361754",
+        "Exzentrizitaet Uranus":"0.04415239160842794",
+        "Exzentrizitaet Neptun":"0.006797626396164978",
+        "Exzentrizitaet Pluto":"0.03695907743726491",
+        "runtime":"1671.043 s"
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":31536000,
+        "Exzentrizitaet Merkur":"0.2079547705040009",
+        "Exzentrizitaet Venus":"0.007109710452960813",
+        "Exzentrizitaet Erde":"0.016911143136669384",
+        "Exzentrizitaet Mars":"0.09330268237668617",
+        "Exzentrizitaet Jupiter":"0.0039475112847621435",
+        "Exzentrizitaet Saturn":"0.0007441993639791456",
+        "Exzentrizitaet Uranus":"7.068095674237045e-05",
+        "Exzentrizitaet Neptun":"4.887248075402101e-06",
+        "Exzentrizitaet Pluto":"2.053212294305202e-05"
+    },
+    {
+        "Name":"kleines Sonnensystem",
+        "dt":600,
+        "t":31536000,
+        "Merkur":{
+            "Exzentrizitaet":"0.2079547705040009",
+            "Halbachse":"58080013672.58649",
+            "Umlaufdauer":"88.35690508229504"
         },
-        {
-                "Name":"Erde und Sonne",
-                "dt":30,
-                "t":31536000,
-                "exzentrizitaet":0.016855017638554817
+        "Venus":{
+            "Exzentrizitaet":"0.007109710452960813",
+            "Halbachse":"108245594319.90329",
+            "Umlaufdauer":"224.80982044288712"
         },
-        {
-                "Name":"Sonne und Mars",
-                "dt":600,
-                "t":63072000,
-                "exzentrizitaet Mars":0.09337528469392581
-        },
-        {
-                "Name":"Sonnensystem",
-                "dt":600,
-                "t":31536000,
-                "Exzentrizitaet Sonnte":"nan",
-                "Exzentrizitaet Erde":"0.01701540134483866",
-                "Exzentrizitaet Mars":"0.09328219469136961",
-                "Exzentrizitaet Merkur":"0.21233422036759012",
-                "Exzentrizitaet Venus":"0.007703824246530718",
-                "Exzentrizitaet Jupiter":"0.003891161512258146",
-                "Exzentrizitaet Saturn":"0.000640503590299553",
-                "Exzentrizitaet Uranus":"4.35446514645034e-05",
-                "Exzentrizitaet Neptun":"9.892843447912341e-06",
-                "Exzentrizitaet Pluto":"2.9144299028128574e-05"
-        },
-        {
-                "Name":"Sonne, Erde und Mars",
-                "dt":600,
-                "t":31536000,
-                "Exzentrizitaet Erde":"0.017034875349873874",
-                "Exzentrizitaet Mars":"0.09337583929100148"
-        },
-        {
-                "Name":"Sonne, Erde und Mars",
-                "dt":600,
-                "t":63072000,
-                "Exzentrizitaet Erde":"0.017414653924512292",
-                "Exzentrizitaet Mars":"0.09337583929100135"
-        },
-        {
-                "Name":"Sonne, Erde und Mars",
-                "dt":600,
-                "t":31536000,
-                "Exzentrizitaet Erde":"0.01703641108956577"
-        },
-        {
-                "Name":"Sonne, Erde und Mars",
-                "dt":600,
-                "t":31536000,
-                "Exzentrizitaet Erde":"0.01703641108956577"
-        },
-        {
-                "Name":"Sonne, Erde und Mars",
-                "dt":600,
-                "t":31536000,
-                "Exzentrizitaet Erde":"0.01703641108956577"
-        },
-        {
-                "Name":"Sonne, Merkur, Venus, Erde, Mars",
-                "dt":600,
-                "t":63072000,
-                "Exzentrizitaet Merkur":"0.21972267897894415",
-                "Exzentrizitaet Venus":"0.008320533338982385",
-                "Exzentrizitaet Erde":"0.017425700017767293",
-                "Exzentrizitaet Mars":"0.09336493147709723"
-        },
-        {
-                "Name":"Merkur",
-                "dt":600,
-                "t":7568640.0,
-                "Exzentrizitaet Merkur":"0.2066951645119601"
-        },
-        {
-                "Name":"Merkur",
-                "dt":20,
-                "t":7568640.0,
-                "Exzentrizitaet Merkur":"0.205774993598322"
-        },
-        {
-                "Name":"test",
-                "dt":100,
-                "t":7568640.0,
-                "Exzentrizitaet Merkur":"0.2057961177970804"
-        },
-        {
-                "Name":"test",
-                "dt":100,
-                "t":7568640.0,
-                "Exzentrizitaet Merkur":"0.2057961177970804",
-                "Exzentrizitaet Venus":"0.0060448135115157035"
-        },
-        {
-                "Name":"test",
-                "dt":600,
-                "t":31536000,
-                "Exzentrizitaet Merkur":"0.2079547705040009",
-                "Exzentrizitaet Venus":"0.007109710452960813",
-                "Exzentrizitaet Erde":"0.016911143136669384"
-        },
-        {
-                "Name":"test",
-                "dt":600,
-                "t":94608000,
-                "Exzentrizitaet Merkur":"0.21295852135406373",
-                "Exzentrizitaet Venus":"0.00772166828132928",
-                "Exzentrizitaet Erde":"0.017164443476736554"
-        },
-        {
-                "Name":"test engine_rk4 mit matplot",
-                "dt":600,
-                "t":94608000,
-                "Exzentrizitaet Merkur":"0.21295852135406373",
-                "Exzentrizitaet Venus":"0.00772166828132928",
-                "Exzentrizitaet Erde":"0.017164443476736554",
-                "Exzentrizitaet Mars":"0.09337468877709303",
-                "Exzentrizitaet Jupiter":"0.02736522008774695",
-                "Exzentrizitaet Saturn":"0.0063916188394908926",
-                "Exzentrizitaet Uranus":"0.0006326723147898459",
-                "Exzentrizitaet Neptun":"4.393279881644237e-05",
-                "Exzentrizitaet Pluto":"0.0001848055974665182",
-                "runtime":"96.934s"
-        },
-        {
-                "Name":"test engine_euler mit matplot",
-                "dt":600,
-                "t":94608000,
-                "Exzentrizitaet Merkur":"0.22695622473950358",
-                "Exzentrizitaet Venus":"0.009518897817371759",
-                "Exzentrizitaet Erde":"0.01779995483810454",
-                "Exzentrizitaet Mars":"0.0935034091564546",
-                "Exzentrizitaet Jupiter":"0.026847157152155274",
-                "Exzentrizitaet Saturn":"0.00565944384397826",
-                "Exzentrizitaet Uranus":"0.0004161564063542221",
-                "Exzentrizitaet Neptun":"6.939365168300018e-05",
-                "Exzentrizitaet Pluto":"0.0002486419492476008",
-                "runtime":"112.164 s"
-        },
-        {
-                "Name":"test engine_euler ohne matplot",
-                "dt":600,
-                "t":94608000,
-                "Exzentrizitaet Merkur":"0.22695622473950358",
-                "Exzentrizitaet Venus":"0.009518897817371759",
-                "Exzentrizitaet Erde":"0.01779995483810454",
-                "Exzentrizitaet Mars":"0.0935034091564546",
-                "Exzentrizitaet Jupiter":"0.026847157152155274",
-                "Exzentrizitaet Saturn":"0.00565944384397826",
-                "Exzentrizitaet Uranus":"0.0004161564063542221",
-                "Exzentrizitaet Neptun":"6.939365168300018e-05",
-                "Exzentrizitaet Pluto":"0.0002486419492476008",
-                "runtime":"104.618 s"
-        },
-        {
-                "Name":"test engine_rk4 ohne matplot",
-                "dt":600,
-                "t":94608000,
-                "Exzentrizitaet Merkur":"0.21295852135406373",
-                "Exzentrizitaet Venus":"0.00772166828132928",
-                "Exzentrizitaet Erde":"0.017164443476736554",
-                "Exzentrizitaet Mars":"0.09337468877709303",
-                "Exzentrizitaet Jupiter":"0.02736522008774695",
-                "Exzentrizitaet Saturn":"0.0063916188394908926",
-                "Exzentrizitaet Uranus":"0.0006326723147898459",
-                "Exzentrizitaet Neptun":"4.393279881644237e-05",
-                "Exzentrizitaet Pluto":"0.0001848055974665182",
-                "runtime":"89.708 s"
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":3600,
-                "t":1324512000,
-                "Exzentrizitaet Merkur":"0.4731651250046491",
-                "Exzentrizitaet Venus":"0.07372058536660726",
-                "Exzentrizitaet Erde":"0.04560380894302763",
-                "Exzentrizitaet Mars":"0.10243133516057504",
-                "Exzentrizitaet Jupiter":"0.0505318625938634",
-                "Exzentrizitaet Saturn":"0.05614556131030317",
-                "Exzentrizitaet Uranus":"0.04415625305806744",
-                "Exzentrizitaet Neptun":"0.006798161443424526",
-                "Exzentrizitaet Pluto":"0.036959081059199095",
-                "runtime":"277.390 s"
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":1200,
-                "t":1324512000,
-                "Exzentrizitaet Merkur":"0.3476220171114616",
-                "Exzentrizitaet Venus":"0.03255644433733193",
-                "Exzentrizitaet Erde":"0.026957494778947738",
-                "Exzentrizitaet Mars":"0.09634865179557572",
-                "Exzentrizitaet Jupiter":"0.050378719646128584",
-                "Exzentrizitaet Saturn":"0.056136725289606275",
-                "Exzentrizitaet Uranus":"0.04415316314629543",
-                "Exzentrizitaet Neptun":"0.006797733755716008",
-                "Exzentrizitaet Pluto":"0.036959077754942546",
-                "runtime":"824.742 s"
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":1324512000,
-                "Exzentrizitaet Merkur":"0.2911050515723265",
-                "Exzentrizitaet Venus":"0.02012456389011579",
-                "Exzentrizitaet Erde":"0.022065374904527556",
-                "Exzentrizitaet Mars":"0.09481110727041427",
-                "Exzentrizitaet Jupiter":"0.050340414083111226",
-                "Exzentrizitaet Saturn":"0.0561345244361754",
-                "Exzentrizitaet Uranus":"0.04415239160842794",
-                "Exzentrizitaet Neptun":"0.006797626396164978",
-                "Exzentrizitaet Pluto":"0.03695907743726491",
-                "runtime":"1671.043 s"
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":31536000,
-                "Exzentrizitaet Merkur":"0.2079547705040009",
-                "Exzentrizitaet Venus":"0.007109710452960813",
-                "Exzentrizitaet Erde":"0.016911143136669384",
-                "Exzentrizitaet Mars":"0.09330268237668617",
-                "Exzentrizitaet Jupiter":"0.0039475112847621435",
-                "Exzentrizitaet Saturn":"0.0007441993639791456",
-                "Exzentrizitaet Uranus":"7.068095674237045e-05",
-                "Exzentrizitaet Neptun":"4.887248075402101e-06",
-                "Exzentrizitaet Pluto":"2.053212294305202e-05"
-        },
-        {
-                "Name":"kleines Sonnensystem",
-                "dt":600,
-                "t":31536000,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2079547705040009",
-                        "Halbachse":"58080013672.58649",
-                        "Umlaufdauer":"88.35690508229504"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.007109710452960813",
-                        "Halbachse":"108245594319.90329",
-                        "Umlaufdauer":"224.80982044288712"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.016911143136669384",
-                        "Halbachse":"149622283582.71588",
-                        "Umlaufdauer":"365.3374830203628"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":15768000.0,
-                "Erde":{
-                        "Exzentrizitaet":"0.016908740109525644",
-                        "Halbachse":"149621917852.26477",
-                        "Umlaufdauer":"365.3361434976899"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":15768000.0,
-                "Erde":{
-                        "Exzentrizitaet":"0.016908740109525644",
-                        "Halbachse":"149621917852.26477",
-                        "Umlaufdauer":"365.3361434976899"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":15768000.0,
-                "Erde":{
-                        "Exzentrizitaet":"0.016908740109525644",
-                        "Halbachse":"149621917852.26477",
-                        "Umlaufdauer":"365.3361434976899"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":15768000.0,
-                "Erde":{
-                        "Exzentrizitaet":"0.016908740109525644",
-                        "Halbachse":"149621917852.26477",
-                        "Umlaufdauer":"365.3361434976899"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":15768000.0,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2066928344961239",
-                        "Halbachse":"57987624162.219635",
-                        "Umlaufdauer":"88.14616122801675"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.006905397409545901",
-                        "Halbachse":"108223324551.49042",
-                        "Umlaufdauer":"224.74044757148363"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.01691094750007797",
-                        "Halbachse":"149622253807.59686",
-                        "Umlaufdauer":"365.3373739660872"
-                },
-                "Mars":{
-                        "Exzentrizitaet":"0.05766756544566871",
-                        "Halbachse":"219261263113.4428",
-                        "Umlaufdauer":"648.1018539462686"
-                },
-                "Jupiter":{
-                        "Exzentrizitaet":"0.0010130968190288862",
-                        "Halbachse":"741272981289.0312",
-                        "Umlaufdauer":"4026.804415742114"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":15768000.0,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2066928344961239",
-                        "Halbachse":"57987624162.219635",
-                        "Umlaufdauer":"88.14616122801675"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.006905397409545901",
-                        "Halbachse":"108223324551.49042",
-                        "Umlaufdauer":"224.74044757148363"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.01691094750007797",
-                        "Halbachse":"149622253807.59686",
-                        "Umlaufdauer":"365.3373739660872"
-                },
-                "Mars":{
-                        "Exzentrizitaet":"0.05766756544566871",
-                        "Halbachse":"219261263113.4428",
-                        "Umlaufdauer":"648.1018539462686"
-                },
-                "Jupiter":{
-                        "Exzentrizitaet":"0.0010130968190288862",
-                        "Halbachse":"741272981289.0312",
-                        "Umlaufdauer":"4026.804415742114"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":15768000.0,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2066928344961239",
-                        "Halbachse":"57987624162.219635",
-                        "Umlaufdauer":"88.14616122801675"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.006905397409545901",
-                        "Halbachse":"108223324551.49042",
-                        "Umlaufdauer":"224.74044757148363"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.01691094750007797",
-                        "Halbachse":"149622253807.59686",
-                        "Umlaufdauer":"365.3373739660872"
-                },
-                "Mars":{
-                        "Exzentrizitaet":"0.05766756544566871",
-                        "Halbachse":"219261263113.4428",
-                        "Umlaufdauer":"648.1018539462686"
-                },
-                "Jupiter":{
-                        "Exzentrizitaet":"0.0010130968190288862",
-                        "Halbachse":"741272981289.0312",
-                        "Umlaufdauer":"4026.804415742114"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":15768000.0,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2066928344961239",
-                        "Halbachse":"57987624162.219635",
-                        "Umlaufdauer":"88.14616122801675"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.006905397409545901",
-                        "Halbachse":"108223324551.49042",
-                        "Umlaufdauer":"224.74044757148363"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.01691094750007797",
-                        "Halbachse":"149622253807.59686",
-                        "Umlaufdauer":"365.3373739660872"
-                },
-                "Mars":{
-                        "Exzentrizitaet":"0.05766756544566871",
-                        "Halbachse":"219261263113.4428",
-                        "Umlaufdauer":"648.1018539462686"
-                },
-                "Jupiter":{
-                        "Exzentrizitaet":"0.0010130968190288862",
-                        "Halbachse":"741272981289.0312",
-                        "Umlaufdauer":"4026.804415742114"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":15768000.0,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2066928344961239",
-                        "Halbachse":"57987624162.219635",
-                        "Umlaufdauer":"88.14616122801675"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.006905397409545901",
-                        "Halbachse":"108223324551.49042",
-                        "Umlaufdauer":"224.74044757148363"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.01691094750007797",
-                        "Halbachse":"149622253807.59686",
-                        "Umlaufdauer":"365.3373739660872"
-                },
-                "Mars":{
-                        "Exzentrizitaet":"0.05766756544566871",
-                        "Halbachse":"219261263113.4428",
-                        "Umlaufdauer":"648.1018539462686"
-                },
-                "Jupiter":{
-                        "Exzentrizitaet":"0.0010130968190288862",
-                        "Halbachse":"741272981289.0312",
-                        "Umlaufdauer":"4026.804415742114"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":15768000.0,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2066928344961239",
-                        "Halbachse":"57987624162.219635",
-                        "Umlaufdauer":"88.14616122801675"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.006905397409545901",
-                        "Halbachse":"108223324551.49042",
-                        "Umlaufdauer":"224.74044757148363"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.01691094750007797",
-                        "Halbachse":"149622253807.59686",
-                        "Umlaufdauer":"365.3373739660872"
-                },
-                "Mars":{
-                        "Exzentrizitaet":"0.05766756544566871",
-                        "Halbachse":"219261263113.4428",
-                        "Umlaufdauer":"648.1018539462686"
-                },
-                "Jupiter":{
-                        "Exzentrizitaet":"0.0010130968190288862",
-                        "Halbachse":"741272981289.0312",
-                        "Umlaufdauer":"4026.804415742114"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":15768000.0,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2066928344961239",
-                        "Halbachse":"57987624162.219635",
-                        "Umlaufdauer":"88.14616122801675"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.006905397409545901",
-                        "Halbachse":"108223324551.49042",
-                        "Umlaufdauer":"224.74044757148363"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.01691094750007797",
-                        "Halbachse":"149622253807.59686",
-                        "Umlaufdauer":"365.3373739660872"
-                },
-                "Mars":{
-                        "Exzentrizitaet":"0.05766756544566871",
-                        "Halbachse":"219261263113.4428",
-                        "Umlaufdauer":"648.1018539462686"
-                },
-                "Jupiter":{
-                        "Exzentrizitaet":"0.0010130968190288862",
-                        "Halbachse":"741272981289.0312",
-                        "Umlaufdauer":"4026.804415742114"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":31536000,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2079547705040009",
-                        "Halbachse":"58080013672.58649",
-                        "Umlaufdauer":"88.35690508229504"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.007109710452960813",
-                        "Halbachse":"108245594319.90329",
-                        "Umlaufdauer":"224.80982044288712"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.016911143136669384",
-                        "Halbachse":"149622283582.71588",
-                        "Umlaufdauer":"365.3374830203628"
-                },
-                "Mars":{
-                        "Exzentrizitaet":"0.09330268237668617",
-                        "Halbachse":"227878693205.7376",
-                        "Umlaufdauer":"686.6824954694068"
-                },
-                "Jupiter":{
-                        "Exzentrizitaet":"0.0039475112847621435",
-                        "Halbachse":"743456804113.627",
-                        "Umlaufdauer":"4044.612229845855"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":31536000,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2079547705040009",
-                        "Halbachse":"58080013672.58649",
-                        "Umlaufdauer":"88.35690508229504"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.007109710452960813",
-                        "Halbachse":"108245594319.90329",
-                        "Umlaufdauer":"224.80982044288712"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.016911143136669384",
-                        "Halbachse":"149622283582.71588",
-                        "Umlaufdauer":"365.3374830203628"
-                },
-                "Mars":{
-                        "Exzentrizitaet":"0.09330268237668617",
-                        "Halbachse":"227878693205.7376",
-                        "Umlaufdauer":"686.6824954694068"
-                },
-                "Jupiter":{
-                        "Exzentrizitaet":"0.0039475112847621435",
-                        "Halbachse":"743456804113.627",
-                        "Umlaufdauer":"4044.612229845855"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":31536000,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2079547705040009",
-                        "Halbachse":"58080013672.58649",
-                        "Umlaufdauer":"88.35690508229504"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.007109710452960813",
-                        "Halbachse":"108245594319.90329",
-                        "Umlaufdauer":"224.80982044288712"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.016911143136669384",
-                        "Halbachse":"149622283582.71588",
-                        "Umlaufdauer":"365.3374830203628"
-                },
-                "Mars":{
-                        "Exzentrizitaet":"0.09330268237668617",
-                        "Halbachse":"227878693205.7376",
-                        "Umlaufdauer":"686.6824954694068"
-                },
-                "Jupiter":{
-                        "Exzentrizitaet":"0.0039475112847621435",
-                        "Halbachse":"743456804113.627",
-                        "Umlaufdauer":"4044.612229845855"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":31536000,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2079547705040009",
-                        "Halbachse":"58080013672.58649",
-                        "Umlaufdauer":"88.35690508229504"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.007109710452960813",
-                        "Halbachse":"108245594319.90329",
-                        "Umlaufdauer":"224.80982044288712"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.016911143136669384",
-                        "Halbachse":"149622283582.71588",
-                        "Umlaufdauer":"365.3374830203628"
-                },
-                "Mars":{
-                        "Exzentrizitaet":"0.09330268237668617",
-                        "Halbachse":"227878693205.7376",
-                        "Umlaufdauer":"686.6824954694068"
-                },
-                "Jupiter":{
-                        "Exzentrizitaet":"0.0039475112847621435",
-                        "Halbachse":"743456804113.627",
-                        "Umlaufdauer":"4044.612229845855"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":31536000,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2079547705040009",
-                        "Halbachse":"58080013672.58649",
-                        "Umlaufdauer":"88.35690508229504"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.007109710452960813",
-                        "Halbachse":"108245594319.90329",
-                        "Umlaufdauer":"224.80982044288712"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.016911143136669384",
-                        "Halbachse":"149622283582.71588",
-                        "Umlaufdauer":"365.3374830203628"
-                },
-                "Mars":{
-                        "Exzentrizitaet":"0.09330268237668617",
-                        "Halbachse":"227878693205.7376",
-                        "Umlaufdauer":"686.6824954694068"
-                },
-                "Jupiter":{
-                        "Exzentrizitaet":"0.0039475112847621435",
-                        "Halbachse":"743456804113.627",
-                        "Umlaufdauer":"4044.612229845855"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":31536000,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2079547705040009",
-                        "Halbachse":"58080013672.58649",
-                        "Umlaufdauer":"88.35690508229504"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.007109710452960813",
-                        "Halbachse":"108245594319.90329",
-                        "Umlaufdauer":"224.80982044288712"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.016911143136669384",
-                        "Halbachse":"149622283582.71588",
-                        "Umlaufdauer":"365.3374830203628"
-                },
-                "Mars":{
-                        "Exzentrizitaet":"0.09330268237668617",
-                        "Halbachse":"227878693205.7376",
-                        "Umlaufdauer":"686.6824954694068"
-                },
-                "Jupiter":{
-                        "Exzentrizitaet":"0.0039475112847621435",
-                        "Halbachse":"743456804113.627",
-                        "Umlaufdauer":"4044.612229845855"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":31536000,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2079547705040009",
-                        "Halbachse":"58080013672.58649",
-                        "Umlaufdauer":"88.35690508229504"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.007109710452960813",
-                        "Halbachse":"108245594319.90329",
-                        "Umlaufdauer":"224.80982044288712"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.016911143136669384",
-                        "Halbachse":"149622283582.71588",
-                        "Umlaufdauer":"365.3374830203628"
-                },
-                "Mars":{
-                        "Exzentrizitaet":"0.09330268237668617",
-                        "Halbachse":"227878693205.7376",
-                        "Umlaufdauer":"686.6824954694068"
-                },
-                "Jupiter":{
-                        "Exzentrizitaet":"0.0039475112847621435",
-                        "Halbachse":"743456804113.627",
-                        "Umlaufdauer":"4044.612229845855"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":31536000,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2079547705040009",
-                        "Halbachse":"58080013672.58649",
-                        "Umlaufdauer":"88.35690508229504"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.007109710452960813",
-                        "Halbachse":"108245594319.90329",
-                        "Umlaufdauer":"224.80982044288712"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.016911143136669384",
-                        "Halbachse":"149622283582.71588",
-                        "Umlaufdauer":"365.3374830203628"
-                },
-                "Mars":{
-                        "Exzentrizitaet":"0.09330268237668617",
-                        "Halbachse":"227878693205.7376",
-                        "Umlaufdauer":"686.6824954694068"
-                },
-                "Jupiter":{
-                        "Exzentrizitaet":"0.0039475112847621435",
-                        "Halbachse":"743456804113.627",
-                        "Umlaufdauer":"4044.612229845855"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":31536000,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2079547705040009",
-                        "Halbachse":"58080013672.58649",
-                        "Umlaufdauer":"88.35690508229504"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.007109710452960813",
-                        "Halbachse":"108245594319.90329",
-                        "Umlaufdauer":"224.80982044288712"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.016911143136669384",
-                        "Halbachse":"149622283582.71588",
-                        "Umlaufdauer":"365.3374830203628"
-                },
-                "Mars":{
-                        "Exzentrizitaet":"0.09330268237668617",
-                        "Halbachse":"227878693205.7376",
-                        "Umlaufdauer":"686.6824954694068"
-                },
-                "Jupiter":{
-                        "Exzentrizitaet":"0.0039475112847621435",
-                        "Halbachse":"743456804113.627",
-                        "Umlaufdauer":"4044.612229845855"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":31536000,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2079547705040009",
-                        "Halbachse":"58080013672.58649",
-                        "Umlaufdauer":"88.35690508229504"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.007109710452960813",
-                        "Halbachse":"108245594319.90329",
-                        "Umlaufdauer":"224.80982044288712"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.016911143136669384",
-                        "Halbachse":"149622283582.71588",
-                        "Umlaufdauer":"365.3374830203628"
-                },
-                "Mars":{
-                        "Exzentrizitaet":"0.09330268237668617",
-                        "Halbachse":"227878693205.7376",
-                        "Umlaufdauer":"686.6824954694068"
-                },
-                "Jupiter":{
-                        "Exzentrizitaet":"0.0039475112847621435",
-                        "Halbachse":"743456804113.627",
-                        "Umlaufdauer":"4044.612229845855"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":31536000,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2079547705040009",
-                        "Halbachse":"58080013672.58649",
-                        "Umlaufdauer":"88.35690508229504"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.007109710452960813",
-                        "Halbachse":"108245594319.90329",
-                        "Umlaufdauer":"224.80982044288712"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.016911143136669384",
-                        "Halbachse":"149622283582.71588",
-                        "Umlaufdauer":"365.3374830203628"
-                },
-                "Mars":{
-                        "Exzentrizitaet":"0.09330268237668617",
-                        "Halbachse":"227878693205.7376",
-                        "Umlaufdauer":"686.6824954694068"
-                },
-                "Jupiter":{
-                        "Exzentrizitaet":"0.0039475112847621435",
-                        "Halbachse":"743456804113.627",
-                        "Umlaufdauer":"4044.612229845855"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":31536000,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2079547705040009",
-                        "Halbachse":"58080013672.58649",
-                        "Umlaufdauer":"88.35690508229504"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.007109710452960813",
-                        "Halbachse":"108245594319.90329",
-                        "Umlaufdauer":"224.80982044288712"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.016911143136669384",
-                        "Halbachse":"149622283582.71588",
-                        "Umlaufdauer":"365.3374830203628"
-                },
-                "Mars":{
-                        "Exzentrizitaet":"0.09330268237668617",
-                        "Halbachse":"227878693205.7376",
-                        "Umlaufdauer":"686.6824954694068"
-                },
-                "Jupiter":{
-                        "Exzentrizitaet":"0.0039475112847621435",
-                        "Halbachse":"743456804113.627",
-                        "Umlaufdauer":"4044.612229845855"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":31536000,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2079547705040009",
-                        "Halbachse":"58080013672.58649",
-                        "Umlaufdauer":"88.35690508229504"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.007109710452960813",
-                        "Halbachse":"108245594319.90329",
-                        "Umlaufdauer":"224.80982044288712"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.016911143136669384",
-                        "Halbachse":"149622283582.71588",
-                        "Umlaufdauer":"365.3374830203628"
-                },
-                "Mars":{
-                        "Exzentrizitaet":"0.09330268237668617",
-                        "Halbachse":"227878693205.7376",
-                        "Umlaufdauer":"686.6824954694068"
-                },
-                "Jupiter":{
-                        "Exzentrizitaet":"0.0039475112847621435",
-                        "Halbachse":"743456804113.627",
-                        "Umlaufdauer":"4044.612229845855"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":31536000,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2079547705040009",
-                        "Halbachse":"58080013672.58649",
-                        "Umlaufdauer":"88.35690508229504"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.007109710452960813",
-                        "Halbachse":"108245594319.90329",
-                        "Umlaufdauer":"224.80982044288712"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.016911143136669384",
-                        "Halbachse":"149622283582.71588",
-                        "Umlaufdauer":"365.3374830203628"
-                },
-                "Mars":{
-                        "Exzentrizitaet":"0.09330268237668617",
-                        "Halbachse":"227878693205.7376",
-                        "Umlaufdauer":"686.6824954694068"
-                },
-                "Jupiter":{
-                        "Exzentrizitaet":"0.0039475112847621435",
-                        "Halbachse":"743456804113.627",
-                        "Umlaufdauer":"4044.612229845855"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":31536000,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2079547705040009",
-                        "Halbachse":"58080013672.58649",
-                        "Umlaufdauer":"88.35690508229504"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.007109710452960813",
-                        "Halbachse":"108245594319.90329",
-                        "Umlaufdauer":"224.80982044288712"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.016911143136669384",
-                        "Halbachse":"149622283582.71588",
-                        "Umlaufdauer":"365.3374830203628"
-                },
-                "Mars":{
-                        "Exzentrizitaet":"0.09330268237668617",
-                        "Halbachse":"227878693205.7376",
-                        "Umlaufdauer":"686.6824954694068"
-                },
-                "Jupiter":{
-                        "Exzentrizitaet":"0.0039475112847621435",
-                        "Halbachse":"743456804113.627",
-                        "Umlaufdauer":"4044.612229845855"
-                }
-        },
-        {
-                "Name":"Sonnensystem mit Pluto",
-                "dt":600,
-                "t":31536000,
-                "Merkur":{
-                        "Exzentrizitaet":"0.2079547705040009",
-                        "Halbachse":"58080013672.58649",
-                        "Umlaufdauer":"88.35690508229504"
-                },
-                "Venus":{
-                        "Exzentrizitaet":"0.007109710452960813",
-                        "Halbachse":"108245594319.90329",
-                        "Umlaufdauer":"224.80982044288712"
-                },
-                "Erde":{
-                        "Exzentrizitaet":"0.016911143136669384",
-                        "Halbachse":"149622283582.71588",
-                        "Umlaufdauer":"365.3374830203628"
-                },
-                "Mars":{
-                        "Exzentrizitaet":"0.09330268237668617",
-                        "Halbachse":"227878693205.7376",
-                        "Umlaufdauer":"686.6824954694068"
-                },
-                "Jupiter":{
-                        "Exzentrizitaet":"0.0039475112847621435",
-                        "Halbachse":"743456804113.627",
-                        "Umlaufdauer":"4044.612229845855"
-                }
+        "Erde":{
+            "Exzentrizitaet":"0.016911143136669384",
+            "Halbachse":"149622283582.71588",
+            "Umlaufdauer":"365.3374830203628"
         }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":15768000.0,
+        "Erde":{
+            "Exzentrizitaet":"0.016908740109525644",
+            "Halbachse":"149621917852.26477",
+            "Umlaufdauer":"365.3361434976899"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":15768000.0,
+        "Erde":{
+            "Exzentrizitaet":"0.016908740109525644",
+            "Halbachse":"149621917852.26477",
+            "Umlaufdauer":"365.3361434976899"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":15768000.0,
+        "Erde":{
+            "Exzentrizitaet":"0.016908740109525644",
+            "Halbachse":"149621917852.26477",
+            "Umlaufdauer":"365.3361434976899"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":15768000.0,
+        "Erde":{
+            "Exzentrizitaet":"0.016908740109525644",
+            "Halbachse":"149621917852.26477",
+            "Umlaufdauer":"365.3361434976899"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":15768000.0,
+        "Merkur":{
+            "Exzentrizitaet":"0.2066928344961239",
+            "Halbachse":"57987624162.219635",
+            "Umlaufdauer":"88.14616122801675"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.006905397409545901",
+            "Halbachse":"108223324551.49042",
+            "Umlaufdauer":"224.74044757148363"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.01691094750007797",
+            "Halbachse":"149622253807.59686",
+            "Umlaufdauer":"365.3373739660872"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.05766756544566871",
+            "Halbachse":"219261263113.4428",
+            "Umlaufdauer":"648.1018539462686"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0010130968190288862",
+            "Halbachse":"741272981289.0312",
+            "Umlaufdauer":"4026.804415742114"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":15768000.0,
+        "Merkur":{
+            "Exzentrizitaet":"0.2066928344961239",
+            "Halbachse":"57987624162.219635",
+            "Umlaufdauer":"88.14616122801675"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.006905397409545901",
+            "Halbachse":"108223324551.49042",
+            "Umlaufdauer":"224.74044757148363"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.01691094750007797",
+            "Halbachse":"149622253807.59686",
+            "Umlaufdauer":"365.3373739660872"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.05766756544566871",
+            "Halbachse":"219261263113.4428",
+            "Umlaufdauer":"648.1018539462686"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0010130968190288862",
+            "Halbachse":"741272981289.0312",
+            "Umlaufdauer":"4026.804415742114"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":15768000.0,
+        "Merkur":{
+            "Exzentrizitaet":"0.2066928344961239",
+            "Halbachse":"57987624162.219635",
+            "Umlaufdauer":"88.14616122801675"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.006905397409545901",
+            "Halbachse":"108223324551.49042",
+            "Umlaufdauer":"224.74044757148363"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.01691094750007797",
+            "Halbachse":"149622253807.59686",
+            "Umlaufdauer":"365.3373739660872"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.05766756544566871",
+            "Halbachse":"219261263113.4428",
+            "Umlaufdauer":"648.1018539462686"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0010130968190288862",
+            "Halbachse":"741272981289.0312",
+            "Umlaufdauer":"4026.804415742114"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":15768000.0,
+        "Merkur":{
+            "Exzentrizitaet":"0.2066928344961239",
+            "Halbachse":"57987624162.219635",
+            "Umlaufdauer":"88.14616122801675"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.006905397409545901",
+            "Halbachse":"108223324551.49042",
+            "Umlaufdauer":"224.74044757148363"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.01691094750007797",
+            "Halbachse":"149622253807.59686",
+            "Umlaufdauer":"365.3373739660872"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.05766756544566871",
+            "Halbachse":"219261263113.4428",
+            "Umlaufdauer":"648.1018539462686"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0010130968190288862",
+            "Halbachse":"741272981289.0312",
+            "Umlaufdauer":"4026.804415742114"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":15768000.0,
+        "Merkur":{
+            "Exzentrizitaet":"0.2066928344961239",
+            "Halbachse":"57987624162.219635",
+            "Umlaufdauer":"88.14616122801675"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.006905397409545901",
+            "Halbachse":"108223324551.49042",
+            "Umlaufdauer":"224.74044757148363"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.01691094750007797",
+            "Halbachse":"149622253807.59686",
+            "Umlaufdauer":"365.3373739660872"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.05766756544566871",
+            "Halbachse":"219261263113.4428",
+            "Umlaufdauer":"648.1018539462686"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0010130968190288862",
+            "Halbachse":"741272981289.0312",
+            "Umlaufdauer":"4026.804415742114"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":15768000.0,
+        "Merkur":{
+            "Exzentrizitaet":"0.2066928344961239",
+            "Halbachse":"57987624162.219635",
+            "Umlaufdauer":"88.14616122801675"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.006905397409545901",
+            "Halbachse":"108223324551.49042",
+            "Umlaufdauer":"224.74044757148363"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.01691094750007797",
+            "Halbachse":"149622253807.59686",
+            "Umlaufdauer":"365.3373739660872"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.05766756544566871",
+            "Halbachse":"219261263113.4428",
+            "Umlaufdauer":"648.1018539462686"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0010130968190288862",
+            "Halbachse":"741272981289.0312",
+            "Umlaufdauer":"4026.804415742114"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":15768000.0,
+        "Merkur":{
+            "Exzentrizitaet":"0.2066928344961239",
+            "Halbachse":"57987624162.219635",
+            "Umlaufdauer":"88.14616122801675"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.006905397409545901",
+            "Halbachse":"108223324551.49042",
+            "Umlaufdauer":"224.74044757148363"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.01691094750007797",
+            "Halbachse":"149622253807.59686",
+            "Umlaufdauer":"365.3373739660872"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.05766756544566871",
+            "Halbachse":"219261263113.4428",
+            "Umlaufdauer":"648.1018539462686"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0010130968190288862",
+            "Halbachse":"741272981289.0312",
+            "Umlaufdauer":"4026.804415742114"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":31536000,
+        "Merkur":{
+            "Exzentrizitaet":"0.2079547705040009",
+            "Halbachse":"58080013672.58649",
+            "Umlaufdauer":"88.35690508229504"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.007109710452960813",
+            "Halbachse":"108245594319.90329",
+            "Umlaufdauer":"224.80982044288712"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.016911143136669384",
+            "Halbachse":"149622283582.71588",
+            "Umlaufdauer":"365.3374830203628"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.09330268237668617",
+            "Halbachse":"227878693205.7376",
+            "Umlaufdauer":"686.6824954694068"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0039475112847621435",
+            "Halbachse":"743456804113.627",
+            "Umlaufdauer":"4044.612229845855"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":31536000,
+        "Merkur":{
+            "Exzentrizitaet":"0.2079547705040009",
+            "Halbachse":"58080013672.58649",
+            "Umlaufdauer":"88.35690508229504"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.007109710452960813",
+            "Halbachse":"108245594319.90329",
+            "Umlaufdauer":"224.80982044288712"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.016911143136669384",
+            "Halbachse":"149622283582.71588",
+            "Umlaufdauer":"365.3374830203628"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.09330268237668617",
+            "Halbachse":"227878693205.7376",
+            "Umlaufdauer":"686.6824954694068"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0039475112847621435",
+            "Halbachse":"743456804113.627",
+            "Umlaufdauer":"4044.612229845855"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":31536000,
+        "Merkur":{
+            "Exzentrizitaet":"0.2079547705040009",
+            "Halbachse":"58080013672.58649",
+            "Umlaufdauer":"88.35690508229504"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.007109710452960813",
+            "Halbachse":"108245594319.90329",
+            "Umlaufdauer":"224.80982044288712"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.016911143136669384",
+            "Halbachse":"149622283582.71588",
+            "Umlaufdauer":"365.3374830203628"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.09330268237668617",
+            "Halbachse":"227878693205.7376",
+            "Umlaufdauer":"686.6824954694068"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0039475112847621435",
+            "Halbachse":"743456804113.627",
+            "Umlaufdauer":"4044.612229845855"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":31536000,
+        "Merkur":{
+            "Exzentrizitaet":"0.2079547705040009",
+            "Halbachse":"58080013672.58649",
+            "Umlaufdauer":"88.35690508229504"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.007109710452960813",
+            "Halbachse":"108245594319.90329",
+            "Umlaufdauer":"224.80982044288712"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.016911143136669384",
+            "Halbachse":"149622283582.71588",
+            "Umlaufdauer":"365.3374830203628"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.09330268237668617",
+            "Halbachse":"227878693205.7376",
+            "Umlaufdauer":"686.6824954694068"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0039475112847621435",
+            "Halbachse":"743456804113.627",
+            "Umlaufdauer":"4044.612229845855"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":31536000,
+        "Merkur":{
+            "Exzentrizitaet":"0.2079547705040009",
+            "Halbachse":"58080013672.58649",
+            "Umlaufdauer":"88.35690508229504"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.007109710452960813",
+            "Halbachse":"108245594319.90329",
+            "Umlaufdauer":"224.80982044288712"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.016911143136669384",
+            "Halbachse":"149622283582.71588",
+            "Umlaufdauer":"365.3374830203628"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.09330268237668617",
+            "Halbachse":"227878693205.7376",
+            "Umlaufdauer":"686.6824954694068"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0039475112847621435",
+            "Halbachse":"743456804113.627",
+            "Umlaufdauer":"4044.612229845855"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":31536000,
+        "Merkur":{
+            "Exzentrizitaet":"0.2079547705040009",
+            "Halbachse":"58080013672.58649",
+            "Umlaufdauer":"88.35690508229504"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.007109710452960813",
+            "Halbachse":"108245594319.90329",
+            "Umlaufdauer":"224.80982044288712"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.016911143136669384",
+            "Halbachse":"149622283582.71588",
+            "Umlaufdauer":"365.3374830203628"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.09330268237668617",
+            "Halbachse":"227878693205.7376",
+            "Umlaufdauer":"686.6824954694068"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0039475112847621435",
+            "Halbachse":"743456804113.627",
+            "Umlaufdauer":"4044.612229845855"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":31536000,
+        "Merkur":{
+            "Exzentrizitaet":"0.2079547705040009",
+            "Halbachse":"58080013672.58649",
+            "Umlaufdauer":"88.35690508229504"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.007109710452960813",
+            "Halbachse":"108245594319.90329",
+            "Umlaufdauer":"224.80982044288712"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.016911143136669384",
+            "Halbachse":"149622283582.71588",
+            "Umlaufdauer":"365.3374830203628"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.09330268237668617",
+            "Halbachse":"227878693205.7376",
+            "Umlaufdauer":"686.6824954694068"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0039475112847621435",
+            "Halbachse":"743456804113.627",
+            "Umlaufdauer":"4044.612229845855"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":31536000,
+        "Merkur":{
+            "Exzentrizitaet":"0.2079547705040009",
+            "Halbachse":"58080013672.58649",
+            "Umlaufdauer":"88.35690508229504"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.007109710452960813",
+            "Halbachse":"108245594319.90329",
+            "Umlaufdauer":"224.80982044288712"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.016911143136669384",
+            "Halbachse":"149622283582.71588",
+            "Umlaufdauer":"365.3374830203628"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.09330268237668617",
+            "Halbachse":"227878693205.7376",
+            "Umlaufdauer":"686.6824954694068"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0039475112847621435",
+            "Halbachse":"743456804113.627",
+            "Umlaufdauer":"4044.612229845855"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":31536000,
+        "Merkur":{
+            "Exzentrizitaet":"0.2079547705040009",
+            "Halbachse":"58080013672.58649",
+            "Umlaufdauer":"88.35690508229504"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.007109710452960813",
+            "Halbachse":"108245594319.90329",
+            "Umlaufdauer":"224.80982044288712"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.016911143136669384",
+            "Halbachse":"149622283582.71588",
+            "Umlaufdauer":"365.3374830203628"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.09330268237668617",
+            "Halbachse":"227878693205.7376",
+            "Umlaufdauer":"686.6824954694068"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0039475112847621435",
+            "Halbachse":"743456804113.627",
+            "Umlaufdauer":"4044.612229845855"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":31536000,
+        "Merkur":{
+            "Exzentrizitaet":"0.2079547705040009",
+            "Halbachse":"58080013672.58649",
+            "Umlaufdauer":"88.35690508229504"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.007109710452960813",
+            "Halbachse":"108245594319.90329",
+            "Umlaufdauer":"224.80982044288712"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.016911143136669384",
+            "Halbachse":"149622283582.71588",
+            "Umlaufdauer":"365.3374830203628"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.09330268237668617",
+            "Halbachse":"227878693205.7376",
+            "Umlaufdauer":"686.6824954694068"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0039475112847621435",
+            "Halbachse":"743456804113.627",
+            "Umlaufdauer":"4044.612229845855"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":31536000,
+        "Merkur":{
+            "Exzentrizitaet":"0.2079547705040009",
+            "Halbachse":"58080013672.58649",
+            "Umlaufdauer":"88.35690508229504"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.007109710452960813",
+            "Halbachse":"108245594319.90329",
+            "Umlaufdauer":"224.80982044288712"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.016911143136669384",
+            "Halbachse":"149622283582.71588",
+            "Umlaufdauer":"365.3374830203628"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.09330268237668617",
+            "Halbachse":"227878693205.7376",
+            "Umlaufdauer":"686.6824954694068"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0039475112847621435",
+            "Halbachse":"743456804113.627",
+            "Umlaufdauer":"4044.612229845855"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":31536000,
+        "Merkur":{
+            "Exzentrizitaet":"0.2079547705040009",
+            "Halbachse":"58080013672.58649",
+            "Umlaufdauer":"88.35690508229504"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.007109710452960813",
+            "Halbachse":"108245594319.90329",
+            "Umlaufdauer":"224.80982044288712"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.016911143136669384",
+            "Halbachse":"149622283582.71588",
+            "Umlaufdauer":"365.3374830203628"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.09330268237668617",
+            "Halbachse":"227878693205.7376",
+            "Umlaufdauer":"686.6824954694068"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0039475112847621435",
+            "Halbachse":"743456804113.627",
+            "Umlaufdauer":"4044.612229845855"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":31536000,
+        "Merkur":{
+            "Exzentrizitaet":"0.2079547705040009",
+            "Halbachse":"58080013672.58649",
+            "Umlaufdauer":"88.35690508229504"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.007109710452960813",
+            "Halbachse":"108245594319.90329",
+            "Umlaufdauer":"224.80982044288712"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.016911143136669384",
+            "Halbachse":"149622283582.71588",
+            "Umlaufdauer":"365.3374830203628"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.09330268237668617",
+            "Halbachse":"227878693205.7376",
+            "Umlaufdauer":"686.6824954694068"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0039475112847621435",
+            "Halbachse":"743456804113.627",
+            "Umlaufdauer":"4044.612229845855"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":31536000,
+        "Merkur":{
+            "Exzentrizitaet":"0.2079547705040009",
+            "Halbachse":"58080013672.58649",
+            "Umlaufdauer":"88.35690508229504"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.007109710452960813",
+            "Halbachse":"108245594319.90329",
+            "Umlaufdauer":"224.80982044288712"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.016911143136669384",
+            "Halbachse":"149622283582.71588",
+            "Umlaufdauer":"365.3374830203628"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.09330268237668617",
+            "Halbachse":"227878693205.7376",
+            "Umlaufdauer":"686.6824954694068"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0039475112847621435",
+            "Halbachse":"743456804113.627",
+            "Umlaufdauer":"4044.612229845855"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":31536000,
+        "Merkur":{
+            "Exzentrizitaet":"0.2079547705040009",
+            "Halbachse":"58080013672.58649",
+            "Umlaufdauer":"88.35690508229504"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.007109710452960813",
+            "Halbachse":"108245594319.90329",
+            "Umlaufdauer":"224.80982044288712"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.016911143136669384",
+            "Halbachse":"149622283582.71588",
+            "Umlaufdauer":"365.3374830203628"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.09330268237668617",
+            "Halbachse":"227878693205.7376",
+            "Umlaufdauer":"686.6824954694068"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0039475112847621435",
+            "Halbachse":"743456804113.627",
+            "Umlaufdauer":"4044.612229845855"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":31536000,
+        "Merkur":{
+            "Exzentrizitaet":"0.2079547705040009",
+            "Halbachse":"58080013672.58649",
+            "Umlaufdauer":"88.35690508229504"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.007109710452960813",
+            "Halbachse":"108245594319.90329",
+            "Umlaufdauer":"224.80982044288712"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.016911143136669384",
+            "Halbachse":"149622283582.71588",
+            "Umlaufdauer":"365.3374830203628"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.09330268237668617",
+            "Halbachse":"227878693205.7376",
+            "Umlaufdauer":"686.6824954694068"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0039475112847621435",
+            "Halbachse":"743456804113.627",
+            "Umlaufdauer":"4044.612229845855"
+        }
+    },
+    {
+        "Name":"Test Alpha Centauri",
+        "dt":600,
+        "t":31536000,
+        "Alpha Centauri A":{
+            "Exzentrizitaet":"0.9660373564960812",
+            "Halbachse":"65788941788.43045",
+            "Umlaufdauer":"75.54776620160152"
+        }
+    },
+    {
+        "Name":"Test Alpha Centauri",
+        "dt":600,
+        "t":31536000,
+        "Alpha Centauri A":{
+            "Exzentrizitaet":"0.9660373564960812",
+            "Halbachse":"65788941788.43045",
+            "Umlaufdauer":"75.54776620160152"
+        }
+    },
+    {
+        "Name":"Test Alpha Centauri",
+        "dt":600,
+        "t":31536000,
+        "Alpha Centauri A":{
+            "Exzentrizitaet":"0.9660373564960812",
+            "Halbachse":"65788941788.43045",
+            "Umlaufdauer":"75.54776620160152"
+        }
+    },
+    {
+        "Name":"Test Alpha Centauri",
+        "dt":600,
+        "t":31536000,
+        "Alpha Centauri A":{
+            "Exzentrizitaet":"0.997459559133031",
+            "Halbachse":"23865422676910.566",
+            "Umlaufdauer":"521970.5159297234"
+        }
+    },
+    {
+        "Name":"Test Alpha Centauri",
+        "dt":600,
+        "t":31536000,
+        "Alpha Centauri A":{
+            "Exzentrizitaet":"0.9688284109089222",
+            "Halbachse":"1944998533721.5027",
+            "Umlaufdauer":"12144.26383543943"
+        }
+    },
+    {
+        "Name":"Test Alpha Centauri",
+        "dt":600,
+        "t":31536000,
+        "Alpha Centauri A":{
+            "Exzentrizitaet":"0.9660373564960812",
+            "Halbachse":"65788941788.43045",
+            "Umlaufdauer":"75.54776620160152"
+        }
+    },
+    {
+        "Name":"Test Alpha Centauri",
+        "dt":200,
+        "t":31536000,
+        "Alpha Centauri A":{
+            "Exzentrizitaet":"0.9197707990895002",
+            "Halbachse":"27323778701.87141",
+            "Umlaufdauer":"20.22103660106539"
+        }
+    },
+    {
+        "Name":"Test Alpha Centauri",
+        "dt":200,
+        "t":31536000,
+        "Alpha Centauri A":{
+            "Exzentrizitaet":"0.9197707990895002",
+            "Halbachse":"27323778701.87141",
+            "Umlaufdauer":"20.22103660106539"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":31536000,
+        "Merkur":{
+            "Exzentrizitaet":"0.2079547705040009",
+            "Halbachse":"58080013672.58649",
+            "Umlaufdauer":"88.35690508229504"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.007109710452960813",
+            "Halbachse":"108245594319.90329",
+            "Umlaufdauer":"224.80982044288712"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.016911143136669384",
+            "Halbachse":"149622283582.71588",
+            "Umlaufdauer":"365.3374830203628"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.09330268237668617",
+            "Halbachse":"227878693205.7376",
+            "Umlaufdauer":"686.6824954694068"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0039475112847621435",
+            "Halbachse":"743456804113.627",
+            "Umlaufdauer":"4044.612229845855"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":31536000,
+        "Merkur":{
+            "Exzentrizitaet":"0.2079547705040009",
+            "Halbachse":"58080013672.58649",
+            "Umlaufdauer":"88.35690508229504"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.007109710452960813",
+            "Halbachse":"108245594319.90329",
+            "Umlaufdauer":"224.80982044288712"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.016911143136669384",
+            "Halbachse":"149622283582.71588",
+            "Umlaufdauer":"365.3374830203628"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.09330268237668617",
+            "Halbachse":"227878693205.7376",
+            "Umlaufdauer":"686.6824954694068"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0039475112847621435",
+            "Halbachse":"743456804113.627",
+            "Umlaufdauer":"4044.612229845855"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":31536000,
+        "Merkur":{
+            "Exzentrizitaet":"0.2079547705040009",
+            "Halbachse":"58080013672.58649",
+            "Umlaufdauer":"88.35690508229504"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.007109710452960813",
+            "Halbachse":"108245594319.90329",
+            "Umlaufdauer":"224.80982044288712"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.016911143136669384",
+            "Halbachse":"149622283582.71588",
+            "Umlaufdauer":"365.3374830203628"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.09330268237668617",
+            "Halbachse":"227878693205.7376",
+            "Umlaufdauer":"686.6824954694068"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.0039475112847621435",
+            "Halbachse":"743456804113.627",
+            "Umlaufdauer":"4044.612229845855"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":63072000,
+        "Merkur":{
+            "Exzentrizitaet":"0.21046539072716083",
+            "Halbachse":"58264700772.018524",
+            "Umlaufdauer":"88.77868561947291"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.0073137735305676965",
+            "Halbachse":"108267845992.7132",
+            "Umlaufdauer":"224.87914407226174"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.017037819667754167",
+            "Halbachse":"149641565740.50027",
+            "Umlaufdauer":"365.40810808146875"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.09330268237668617",
+            "Halbachse":"227878693205.7376",
+            "Umlaufdauer":"686.6824954694068"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.014267928588477353",
+            "Halbachse":"751240647906.7502",
+            "Umlaufdauer":"4108.297619370699"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":630720000,
+        "Merkur":{
+            "Exzentrizitaet":"0.25174346178256074",
+            "Halbachse":"61478911855.58421",
+            "Umlaufdauer":"96.22539189429044"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.013180506422137332",
+            "Halbachse":"108911508321.3544",
+            "Umlaufdauer":"226.88751255799278"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.01930953110544989",
+            "Halbachse":"149988201572.32452",
+            "Umlaufdauer":"366.6785124647262"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.09402179828727802",
+            "Halbachse":"228059570840.1656",
+            "Umlaufdauer":"687.5002341569917"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.05031853090464206",
+            "Halbachse":"779758291688.1145",
+            "Umlaufdauer":"4344.434785600959"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":630720000,
+        "Merkur":{
+            "Exzentrizitaet":"0.25174346178256074",
+            "Halbachse":"61478911855.58421",
+            "Umlaufdauer":"96.22539189429044"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.013180506422137332",
+            "Halbachse":"108911508321.3544",
+            "Umlaufdauer":"226.88751255799278"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.01930953110544989",
+            "Halbachse":"149988201572.32452",
+            "Umlaufdauer":"366.6785124647262"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.09402179828727802",
+            "Halbachse":"228059570840.1656",
+            "Umlaufdauer":"687.5002341569917"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.05031853090464206",
+            "Halbachse":"779758291688.1145",
+            "Umlaufdauer":"4344.434785600959"
+        }
+    },
+    {
+        "Name":"Test Alpha Centauri",
+        "dt":200,
+        "t":31536000,
+        "Alpha Centauri A":{
+            "Exzentrizitaet":"0.0016043925555688288",
+            "Halbachse":"3446280212417.036",
+            "Umlaufdauer":"28642.9771168592"
+        }
+    },
+    {
+        "Name":"Test Alpha Centauri",
+        "dt":200,
+        "t":31536000,
+        "Alpha Centauri A":{
+            "Exzentrizitaet":"0.0008546123040130803",
+            "Halbachse":"1868578336370.2314",
+            "Umlaufdauer":"11435.607493933123"
+        }
+    },
+    {
+        "Name":"Test Alpha Centauri",
+        "dt":200,
+        "t":31536000,
+        "Alpha Centauri A":{
+            "Exzentrizitaet":"0.010253386892127844",
+            "Halbachse":"1848032830732.5679",
+            "Umlaufdauer":"11247.52066593952"
+        }
+    },
+    {
+        "Name":"Test Alpha Centauri",
+        "dt":200,
+        "t":31536000,
+        "Alpha Centauri A":{
+            "Exzentrizitaet":"0.9999994750257297",
+            "Halbachse":"8487446419185631.0",
+            "Umlaufdauer":"3500723.7808352704"
+        }
+    },
+    {
+        "Name":"Test Alpha Centauri",
+        "dt":200,
+        "t":31536000,
+        "Alpha Centauri A":{
+            "Exzentrizitaet":"0.9999995384414712",
+            "Halbachse":"9559144490237508.0",
+            "Umlaufdauer":"4184280.7425519363"
+        }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":600,
+        "t":15768000.0,
+        "Merkur":{
+            "Exzentrizitaet":"0.20639004594574023",
+            "Halbachse":"57965499956.254425",
+            "Umlaufdauer":"88.08464644477677"
+        },
+        "Venus":{
+            "Exzentrizitaet":"0.006652355868684975",
+            "Halbachse":"108195756159.67574",
+            "Umlaufdauer":"224.626339937561"
+        },
+        "Erde":{
+            "Exzentrizitaet":"0.016655430234169967",
+            "Halbachse":"149583375198.28107",
+            "Umlaufdauer":"365.1490819470897"
+        },
+        "Mars":{
+            "Exzentrizitaet":"0.057521763983711616",
+            "Halbachse":"219227343377.62164",
+            "Umlaufdauer":"647.870020689632"
+        },
+        "Jupiter":{
+            "Exzentrizitaet":"0.001008041775300925",
+            "Halbachse":"741269230340.5782",
+            "Umlaufdauer":"4026.2681718236263"
+        }
+    },
+    {
+        "Name":"Test Alpha Centauri",
+        "dt":200,
+        "t":31536000,
+        "Alpha Centauri B":{
+            "Exzentrizitaet":"0.990484637710671",
+            "Halbachse":"196207077520227.53",
+            "Umlaufdauer":"12302962.097435417"
+        }
+    },
+    {
+        "Name":"Test Alpha Centauri",
+        "dt":200,
+        "t":31536000,
+        "Alpha Centauri B":{
+            "Exzentrizitaet":"0.9900896067709063",
+            "Halbachse":"188386210635374.47",
+            "Umlaufdauer":"11574742.764696777"
+        }
+    },
+    {
+        "Name":"Test Alpha Centauri",
+        "dt":200,
+        "t":31536000,
+        "Alpha Centauri B":{
+            "Exzentrizitaet":"0.9900896067709063",
+            "Halbachse":"188386210635374.47",
+            "Umlaufdauer":"11574742.764696777"
+        }
+    }
 ]

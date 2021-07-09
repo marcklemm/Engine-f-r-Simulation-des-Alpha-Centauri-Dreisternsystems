@@ -9,6 +9,8 @@ import matplotlib.pyplot as plt
 '''Konstanten'''
 G = 6.67430e-11 # Gravitationskonstante
 pi = 3.1415926535 # Kreiszahl pi
+ae =  1.495978707e11 # Astronomische Einheit
+solar_mass = 1.989e30
 
 """Einheiten"""
 yr = 365 * 24 * 3600 # Jahr in Sekunden
@@ -20,7 +22,7 @@ def betrag(vek): # berechnet Betrag eines Vektors (Numpy Array)
 
 '''Simulation'''
 fig = plt.figure(figsize=(10, 10), tight_layout=True)
-ax = fig.add_subplot()
+ax = fig.add_subplot(projection='3d')
 
 # System, in welchem sich die Körper bewegen
 class System:
