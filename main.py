@@ -1,8 +1,8 @@
 # Datei zur konfiguration der Simulation
 from engine_rk4 import *
-"""
-sonnensystem = System(600, .5  * yr, "Sonnensystem mit Pluto", print_genauigkeit=500)
 
+
+"""
 sonne = Objekt(masse=solar_mass, obj_id='Sonne')
 erde = Objekt(masse=5.9724e24, r=np.array([147.092e9, 0., 0.]), v=np.array([0., 30.29e3, 0.]), obj_id='Erde')
 mars = Objekt(masse=0.64171e24, r=np.array([206.617e9, 0., 0.]), v=np.array([0., 26.50e3, 0.]), obj_id='Mars')
@@ -14,16 +14,17 @@ uranus = Objekt(masse=86.813e24, r=np.array([2741.302e9, 0., 0.]), v=np.array([0
 neptun = Objekt(masse=102.413e24, r=np.array([4444.449e9, 0., 0.]), v=np.array([0., 5.50e3, 0.]), obj_id='Neptun')
 pluto = Objekt(masse=0.01303e24, r=np.array([7304.326e9, 0., 0.]), v=np.array([0., 3.71e3, 0.]), obj_id='Pluto')
 
+sonnensystem = System(600, .5  * yr, "Sonnensystem mit Pluto", print_genauigkeit=500)
 sonnensystem.objekt_hinzu(sonne,merkur, venus, erde, mars, jupiter)
 """
 
 alpha_centauri = System(200, 1 * yr, "Test Alpha Centauri", print_genauigkeit=100)
 
 alpha_centauri_a = Objekt(masse=1.0788 * solar_mass, obj_id="Alpha Centauri A")
-alpha_centauri_b = Objekt(masse=0.9092 * solar_mass, r=np.array([12.48 * ae, 0., 0.]), v=np.array([0., 11888.e3, 0.]), obj_id="Alpha Centauri B")
-proxima_centauri = Objekt()
+alpha_centauri_b = Objekt(masse=0.9092 * solar_mass, r=np.array([200513.55e3, 0., 0.]), v=np.array([0., 11888.e3, 0.]), obj_id="Alpha Centauri B")
+proxima_centauri = Objekt(masse=0.1221 * solar_mass, r=np.array([8.2e3 * ae, 0., 0.]), v=np.array([0., 22.204e3, 0.]), obj_id="Proxima Centauri")
 
-alpha_centauri.objekt_hinzu(alpha_centauri_a, alpha_centauri_b)
+alpha_centauri.objekt_hinzu(alpha_centauri_a, alpha_centauri_b, proxima_centauri)
 
 
 def main():

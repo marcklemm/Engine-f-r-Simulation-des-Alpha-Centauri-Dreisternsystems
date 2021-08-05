@@ -147,8 +147,7 @@ class Objekt:
 
     # berechnet die Exzentrizität der Umlaufbahn des Körpers
     def exzentrizitaet(self):
-        exzent = (self.apphel - self.perihel) / (self.apphel + self.perihel) # berechnet die Exzentrizität
-        return exzent
+        return (self.apphel - self.perihel) / (self.apphel + self.perihel)
 
     # berechnet die grosse Halbachse
     def semi_ax_up(self):
