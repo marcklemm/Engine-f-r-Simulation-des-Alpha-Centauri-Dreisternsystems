@@ -14,7 +14,7 @@ solar_mass = 1.989e30
 
 """Einheiten"""
 yr = 365 * 24 * 3600 # Jahr in Sekunden
-d = 24 * 3600 # Tag in Sekunden
+day = 24 * 3600 # Tag in Sekunden
 
 """Funktionen"""
 def betrag(vek): # berechnet Betrag eines Vektors (Numpy Array)
@@ -99,7 +99,7 @@ class System:
         data = {"Name": self.name, "dt": self.dt, "t": self.t}  # erstellt die relevanten Daten im Json-Format
         for obj in self.objekte[1:]:
             data[f'{obj.obj_id}'] = {'Exzentrizitaet': f'{obj.exzentrizitaet()}', 'Halbachse': f'{obj.semi_a}',
-                                     'Umlaufdauer': f'{obj.umlaufperiode(self.objekte[0]) / d}'}
+                                     'Umlaufdauer': f'{obj.umlaufperiode(self.objekte[0]) / day}'}
         with open(self.output_file, 'r+') as log: # öffnet die Datei
             content = json.load(log) # lädt den Inhalt der Datei
             content.append(data) # fügt die Daten in den Inhalt ein

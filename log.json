@@ -1497,5 +1497,20 @@
                "Halbachse":"1226702536210282.5",
                "Umlaufdauer":"247457912.41553995"
           }
+     },
+     {
+          "Name":"Test Alpha Centauri",
+          "dt":259200,
+          "t":2522880000,
+          "Alpha Centauri B":{
+               "Exzentrizitaet":"0.9998630920699307",
+               "Halbachse":"4.9105633912474477e+17",
+               "Umlaufdauer":"1540404097366.5388"
+          },
+          "Proxima Centauri":{
+               "Exzentrizitaet":"0.9998976292427323",
+               "Halbachse":"4.9020541268336525e+17",
+               "Umlaufdauer":"1976785758061.922"
+          }
      }
 ]
