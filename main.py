@@ -5,11 +5,11 @@ from engine_rk4 import *
 
 alpha_centauri = System(3*day, 80 * yr, "Test Alpha Centauri", print_genauigkeit=100)
 
-alpha_centauri_a = Objekt(masse=1.0788 * solar_mass, obj_id="Alpha Centauri A") # 28.358 ae
-alpha_centauri_b = Objekt(masse=0.9092 * solar_mass, r=np.array([200513.55e3, 0., 0.]), v=np.array([0., 11888.e3, 0.]), obj_id="Alpha Centauri B") # 19.441 ae
+alpha_centauri_a = Objekt(masse=1.0788 * solar_mass, v=np.array([0., -3257.1425142706257, 0.]), obj_id="Alpha Centauri A") # 28.358 ae
+alpha_centauri_b = Objekt(masse=0.9092 * solar_mass, r=np.array([35.6 * ae, 0., 0.]), v=np.array([0., 5086.166268330456, 0.]), obj_id="Alpha Centauri B") # 19.441 ae
 proxima_centauri = Objekt(masse=0.1221 * solar_mass, r=np.array([8.2e3 * ae, 0., 0.]), v=np.array([0., 22.204e3, 0.]), obj_id="Proxima Centauri")
 
-alpha_centauri.objekt_hinzu(alpha_centauri_a, alpha_centauri_b, proxima_centauri)
+alpha_centauri.objekt_hinzu(alpha_centauri_a, alpha_centauri_b, ) # proxima_centauri
 
 
 def main():
