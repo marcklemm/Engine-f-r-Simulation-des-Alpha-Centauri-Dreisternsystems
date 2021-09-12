@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 G = 6.67430e-11 # Gravitationskonstante
 pi = 3.1415926535 # Kreiszahl pi
 ae =  1.495978707e11 # Astronomische Einheit
-solar_mass = 1.989e30
+solar_mass = 1.989e30 # Masse der Sonne
 
 """Einheiten"""
 yr = 365 * 24 * 3600 # Jahr in Sekunden
@@ -21,8 +21,10 @@ def betrag(vek): # berechnet Betrag eines Vektors (Numpy Array)
     return np.sqrt(sum(vek**2))
 
 '''Simulation'''
-fig = plt.figure(figsize=(10, 10), tight_layout=True)
-ax = fig.add_subplot(projection='3d')
+fig = plt.figure(figsize=(10, 10), tight_layout=True) # erstellt ein Diagramm, in welcher die Daten eingefügt werden
+ax = fig.add_subplot() # erstellt einen 2D Subplot innerhalb des Diagramms, kann auch 3D dargestellt werden --> projection='3d'
+ax.set_aspect('equal') # setzt die Seitenverhältnisse des subplots gleich
+
 
 # System, in welchem sich die Körper bewegen
 class System:
@@ -33,9 +35,10 @@ class System:
         self.t = t # Gesamtzeit der Simulation
         self.name = name # Name zur Identifikation der Simulation
         self.output_file = output_file # Datei, in welche relevante Informationen über die Simulation gespeichert werden
-        self.output_koords = output_koords
-        self.print_genauigkeit = print_genauigkeit
-        self.vergangene_t = 0
+        self.output_koords = output_koords # Datei für den Output der Koordinaten
+        self.print_genauigkeit = print_genauigkeit # die Genauigkeit der Koordinaten, welche für Visualisierung bereitgestellt werden
+        self.vergangene_t = 0 # die vergangene Zeit der Simulation
+        # berechnet die print_genauigkeit
         if print_genauigkeit and print_genauigkeit > 1:
             schritt = np.arange(0, self.t + self.dt, self.dt, dtype='int')
             self.schritt = [x for i, x in enumerate(schritt) if i % (len(schritt) // (self.print_genauigkeit-1)) == 0]
@@ -54,7 +57,7 @@ class System:
                 richtungs_vek = obj.r - r # berechnet den Richtungsvektor zwischen r und obj.r
                 differenz = betrag(richtungs_vek) # berechnet den Abstand zwischen r und obj.r
 
-                # ändert Apsis und Perapsis + Halbachse
+                # ändert Apsis, Perapsis und Halbachse
                 if i == 0:
                     if obj1.perihel == 0:
                         obj1.perihel = differenz
@@ -87,6 +90,7 @@ class System:
             obj.r += (1/6) * (k0 + 2 * k1 + 2 * k2 + k3) # ändert die berechnete Position des Körpers
             obj.v += (1/6) * (l0 + 2 * l1 + 2 * l2 + l3) # ändert die berechnete Geschwindigkeit des Körpers
 
+            # fügt die Koordinaten zu Output hinzu, bei jedem in print_genauigkeit definiertem Schritt
             if self.vergangene_t in self.schritt:
                 koor = obj.r.tolist()
                 x, y, z = koor
@@ -109,8 +113,9 @@ class System:
 
     # speichert die nötigen Koordinaten in .txt datei
     def output_r(self):
-        with open(self.output_koords, 'a') as f:
+        with open(self.output_koords, 'a') as f: # öffnet die Datei in der Append-Funktion
             data = {}
+            # speichert die Daten in der Liste "data" und fügt diese in die Datei ein
             for obj in self.objekte:
                 data[f'{obj.obj_id}'] = {"x": obj.xs, "y": obj.ys, "z": obj.zs}
             json.dump(data, f, indent=len(data))
@@ -120,8 +125,9 @@ class System:
         self.vergangene_t = 0
         while self.vergangene_t <= self.t:  # die Simulation läuft, bis die Vergangene Zeit nicht mehr kleiner als die Gesamtzeit ist
             self.r_update_rk4()  # berechnet die Position der Objekte
-            self.vergangene_t += self.dt
+            self.vergangene_t += self.dt # ändert die vergangene Zeit
 
+        # fügt die Daten in den Subplot des Diagramms ein
         for obj in self.objekte:
             ax.scatter(obj.xs, obj.ys)
 
@@ -129,7 +135,7 @@ class System:
         self.output_r()
 
 
-# Blueprint für ein Körper
+# "Blueprint" für einen Körper
 class Objekt:
     def __init__(self, masse=1, a=np.array([0., 0., 0.]), v=np.array([0., 0., 0.]), r=np.array([0., 0., 0.]), obj_id='objekt'):
         self.masse = masse # die Masse des Körpers

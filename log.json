@@ -2017,5 +2017,205 @@
             "Halbachse":"58394674302.61155",
             "Umlaufdauer":"89.06471800582781"
         }
+    },
+    {
+        "Name":"Sonnensystem mit Pluto",
+        "dt":864.0,
+        "t":63072000,
+        "Merkur":{
+            "Exzentrizitaet":"0.21222276006614887",
+            "Halbachse":"58394674302.61155",
+            "Umlaufdauer":"89.06471800582781"
+        }
+    },
+    {
+        "Name":"Reduzierte Masse -- Test Alpha Centauri",
+        "dt":518400,
+        "t":5045760000,
+        "Alpha Centauri B":{
+            "Exzentrizitaet":"0.5232943359701604",
+            "Halbachse":"3512678507066.389",
+            "Umlaufdauer":"29471.02817241067"
+        }
+    },
+    {
+        "Name":"Reduzierte Masse -- Test Alpha Centauri",
+        "dt":172800,
+        "t":5045760000,
+        "Alpha Centauri B":{
+            "Exzentrizitaet":"0.5207622139204691",
+            "Halbachse":"3491296796914.218",
+            "Umlaufdauer":"29202.352393816054"
+        }
+    },
+    {
+        "Name":"Reduzierte Masse -- Test Alpha Centauri",
+        "dt":172800,
+        "t":5045760000,
+        "Alpha Centauri B":{
+            "Exzentrizitaet":"0.5207622139204691",
+            "Halbachse":"3491296796914.218",
+            "Umlaufdauer":"29202.352393816054"
+        }
+    },
+    {
+        "Name":"Reduzierte Masse -- Test Alpha Centauri",
+        "dt":172800,
+        "t":5045760000,
+        "Alpha Centauri B":{
+            "Exzentrizitaet":"0.5207622139204691",
+            "Halbachse":"3491296796914.218",
+            "Umlaufdauer":"29202.352393816054"
+        }
+    },
+    {
+        "Name":"Reduzierte Masse -- Test Alpha Centauri",
+        "dt":172800,
+        "t":10091520000,
+        "Alpha Centauri B":{
+            "Exzentrizitaet":"0.5221925208881919",
+            "Halbachse":"3501747922845.309",
+            "Umlaufdauer":"29333.575446549366"
+        }
+    },
+    {
+        "Name":"Reduzierte Masse -- Test Alpha Centauri",
+        "dt":43200.0,
+        "t":2522880000,
+        "Alpha Centauri B":{
+            "Exzentrizitaet":"0.5196132740163347",
+            "Halbachse":"3481888740522.8384",
+            "Umlaufdauer":"29084.3938417446"
+        }
+    },
+    {
+        "Name":"Reduzierte Masse -- Test Alpha Centauri",
+        "dt":43200.0,
+        "t":1261440000,
+        "Alpha Centauri B":{
+            "Exzentrizitaet":"0.5194329843223141",
+            "Halbachse":"3480582473893.704",
+            "Umlaufdauer":"29068.028409456998"
+        }
+    },
+    {
+        "Name":"Reduzierte Masse -- Test Alpha Centauri",
+        "dt":43200.0,
+        "t":2522880000,
+        "Alpha Centauri B":{
+            "Exzentrizitaet":"0.5196132740163347",
+            "Halbachse":"3481888740522.8384",
+            "Umlaufdauer":"29084.3938417446"
+        }
+    },
+    {
+        "Name":"Reduzierte Masse -- Test Alpha Centauri",
+        "dt":43200.0,
+        "t":630720000,
+        "Alpha Centauri B":{
+            "Exzentrizitaet":"0.26102969058846376",
+            "Halbachse":"4193804358912.7446",
+            "Umlaufdauer":"38445.891200856495"
+        }
+    },
+    {
+        "Name":"Reduzierte Masse -- Test Alpha Centauri",
+        "dt":43200.0,
+        "t":630720000,
+        "Alpha Centauri B":{
+            "Exzentrizitaet":"0.12038426429584981",
+            "Halbachse":"6012297873577.462",
+            "Umlaufdauer":"65993.08275850778"
+        }
+    },
+    {
+        "Name":"Reduzierte Masse -- Test Alpha Centauri",
+        "dt":43200.0,
+        "t":2522880000,
+        "Alpha Centauri B":{
+            "Exzentrizitaet":"0.4866763184678831",
+            "Halbachse":"10302489457635.615",
+            "Umlaufdauer":"148030.4129438079"
+        }
+    },
+    {
+        "Name":"Reduzierte Masse -- Test Alpha Centauri",
+        "dt":43200.0,
+        "t":2522880000,
+        "Alpha Centauri B":{
+            "Exzentrizitaet":"0.4866763184678831",
+            "Halbachse":"10302489457635.615",
+            "Umlaufdauer":"148030.4129438079"
+        }
+    },
+    {
+        "Name":"Reduzierte Masse -- Test Alpha Centauri",
+        "dt":43200.0,
+        "t":2522880000,
+        "Alpha Centauri B":{
+            "Exzentrizitaet":"0.5196132740163347",
+            "Halbachse":"3481888740522.8384",
+            "Umlaufdauer":"29084.3938417446"
+        }
+    },
+    {
+        "Name":"Reduzierte Masse -- Test Alpha Centauri",
+        "dt":43200.0,
+        "t":2522880000,
+        "Alpha Centauri B":{
+            "Exzentrizitaet":"0.5196132740163347",
+            "Halbachse":"3481888740522.8384",
+            "Umlaufdauer":"29084.3938417446"
+        }
+    },
+    {
+        "Name":"Test Alpha Centauri",
+        "dt":43200.0,
+        "t":2522880000,
+        "Alpha Centauri B":{
+            "Exzentrizitaet":"0.18944514307417779",
+            "Halbachse":"13222863539554.537",
+            "Umlaufdauer":"215241.47350781132"
+        }
+    },
+    {
+        "Name":"Test Alpha Centauri",
+        "dt":43200.0,
+        "t":2522880000,
+        "Alpha Centauri B":{
+            "Exzentrizitaet":"0.23156228027002346",
+            "Halbachse":"8702650637897.654",
+            "Umlaufdauer":"114925.1307643924"
+        }
+    },
+    {
+        "Name":"Test Alpha Centauri",
+        "dt":43200.0,
+        "t":2522880000,
+        "Alpha Centauri B":{
+            "Exzentrizitaet":"0.5194337121020913",
+            "Halbachse":"3526924595977.187",
+            "Umlaufdauer":"29650.49476080262"
+        }
+    },
+    {
+        "Name":"Test Alpha Centauri",
+        "dt":43200.0,
+        "t":2522880000,
+        "Alpha Centauri B":{
+            "Exzentrizitaet":"0.5194336390818253",
+            "Halbachse":"3522177894991.603",
+            "Umlaufdauer":"29590.6573597171"
+        }
+    },
+    {
+        "Name":"Test Alpha Centauri",
+        "dt":600,
+        "t":2522880000,
+        "Alpha Centauri B":{
+            "Exzentrizitaet":"0.5194694948526519",
+            "Halbachse":"3522094780818.43",
+            "Umlaufdauer":"29589.609972879545"
+        }
     }
 ]

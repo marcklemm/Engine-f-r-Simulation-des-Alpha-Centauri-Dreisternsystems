@@ -1,6 +1,9 @@
 # Diese Variation der Simulation approximiert die Bewegung der Körper in einem System basierend auf dem Euler-Verfahren.
 # Das Euler-Verfahren bietet eine simple, effiziente aber dafür ungenaue Methode die Bewegungen der Körper zu simulieren
 # und ist aufgrund der simplen Implementation gut dafür geeignet, das Grundgerüst für eine präzisere Simulation zu erstellen.
+# ACHTUNG: Diese Methode unterlag nicht den in engine_rk4.py angewendeten Optimierungsprozessen, ist ziemlich ungenau im
+# Vergleich und wurde nur als Vorlage für die weiterführende Arbeit verwendet. Auch fehlen Funktionen, welche in
+# engine_rk4.py anwendung finden.
 
 import numpy as np
 import json
@@ -17,7 +20,6 @@ d = 24 * 365 # Tag in Sekunden
 """Funktionen"""
 def betrag(vek): # berechnet Betrag eines Vektors (Numpy Array)
     return np.sqrt(sum(vek**2))
-
 
 '''Simulation'''
 
