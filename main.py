@@ -1,37 +1,16 @@
 # Datei zur konfiguration der Simulation
-from engine_rk4 import *
-
-alpha_centauri = System(600 , 80 * yr, "Test Alpha Centauri", print_genauigkeit=100) # Das System, welches berechnet werden soll
+from engine_rk4 import * # zur Simulation mit Euler engine_euler verwenden
+"""
+alpha_centauri = System(50*day , 40000 * yr, "Test Alpha Centauri", print_genauigkeit=100) # Das System, welches berechnet werden soll
 
 # die Objekte, welche simuliert werden sollen
 alpha_centauri_a = Objekt(masse=1.0788 * solar_mass, r=np.array([-16.361030689610068 * ae, 0., 0.]), v=np.array([0.,-4867.906011953455/2, 0.]), obj_id="Alpha Centauri A") # 28.358 ae/2
 alpha_centauri_b = Objekt(masse=0.9092 * solar_mass, r=np.array([19.412978341345514 * ae, 0., 0.]), v=np.array([0., 4867.906011953455/2, 0.]), obj_id="Alpha Centauri B") # 19.441 ae/2
 proxima_centauri = Objekt(masse=0.1221 * solar_mass, r=np.array([8.2e3 * ae, 0., 0.]), v=np.array([0., 22.204e3, 0.]), obj_id="Proxima Centauri")
 
-alpha_centauri.objekt_hinzu(alpha_centauri_a, alpha_centauri_b, ) # fügt die Körper dem System hinzu --> proxima_centauri
-
-# stellt Messungen der Simulation auf, welche zur Analyse und Optimierung der Effizienz benötigt werden
-def main():
-    import cProfile
-    import pstats
-
-    with cProfile.Profile() as pr:
-        alpha_centauri.simulation() # was gemesst werden soll -- für Berechnung Sonnensystem: sonnensystem.simulation()
-
-    stats = pstats.Stats(pr)
-    stats.sort_stats(pstats.SortKey.TIME)
-    stats = stats
-    stats.print_stats(10)
-
-    print('End')
-    plt.show()
-
-if __name__ == '__main__':
-    main()
-
-# es kann auch das Sonnensystem für die Simulation verwendet werden:
+alpha_centauri.objekt_hinzu(alpha_centauri_a, alpha_centauri_b, proxima_centauri) # fügt die Körper dem System hinzu -->
 """
-sonnensystem = System(0.01 * day, 2  * yr, "Sonnensystem mit Pluto", print_genauigkeit=200)
+sonnensystem = System(0.01 * day, 10  * yr, "Sonnensystem mit Pluto", print_genauigkeit=100)
 
 sonne = Objekt(masse=solar_mass, obj_id='Sonne')
 erde = Objekt(masse=5.9724e24, r=np.array([147.092e9, 0., 0.]), v=np.array([0., 30.29e3, 0.]), obj_id='Erde')
@@ -44,5 +23,27 @@ uranus = Objekt(masse=86.813e24, r=np.array([2741.302e9, 0., 0.]), v=np.array([0
 neptun = Objekt(masse=102.413e24, r=np.array([4444.449e9, 0., 0.]), v=np.array([0., 5.50e3, 0.]), obj_id='Neptun')
 pluto = Objekt(masse=0.01303e24, r=np.array([7304.326e9, 0., 0.]), v=np.array([0., 3.71e3, 0.]), obj_id='Pluto')
 
-sonnensystem.objekt_hinzu(sonne,merkur) #, venus, erde, mars, jupiter, saturn, uranus, neptun, pluto
-"""
+sonnensystem.objekt_hinzu(sonne, merkur, venus, erde, mars, jupiter, saturn, uranus, neptun) #, pluto
+# stellt Messungen der Simulation auf, welche zur Analyse und Optimierung der Effizienz benötigt werden
+def main():
+    import cProfile
+    import pstats
+
+    with cProfile.Profile() as pr:
+        # was gemesst werden soll -- für Berechnung Sonnensystem: alpha_centauri.simulation()
+        sonnensystem.simulation()
+    stats = pstats.Stats(pr)
+    stats.sort_stats(pstats.SortKey.TIME)
+    stats = stats
+    stats.print_stats(10)
+
+    print('End')
+    plt.show()
+
+if __name__ == '__main__':
+    main()
+
+# es kann auch das Sonnensystem für die Simulation verwendet werden:
+
+
+

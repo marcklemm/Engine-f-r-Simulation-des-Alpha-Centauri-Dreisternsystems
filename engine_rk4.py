@@ -9,12 +9,12 @@ import matplotlib.pyplot as plt
 '''Konstanten'''
 G = 6.67430e-11 # Gravitationskonstante
 pi = 3.1415926535 # Kreiszahl pi
-ae =  1.495978707e11 # Astronomische Einheit
-solar_mass = 1.989e30 # Masse der Sonne
 
 """Einheiten"""
 yr = 365 * 24 * 3600 # Jahr in Sekunden
 day = 24 * 3600 # Tag in Sekunden
+ae =  1.495978707e11 # Astronomische Einheit
+solar_mass = 1.989e30 # Masse der Sonne
 
 """Funktionen"""
 def betrag(vek): # berechnet Betrag eines Vektors (Numpy Array)
@@ -57,7 +57,7 @@ class System:
                 richtungs_vek = obj.r - r # berechnet den Richtungsvektor zwischen r und obj.r
                 differenz = betrag(richtungs_vek) # berechnet den Abstand zwischen r und obj.r
 
-                # ändert Apsis, Perapsis und Halbachse
+                # ändert Apsis, Periapsis und Halbachse
                 if i == 0:
                     if obj1.perihel == 0:
                         obj1.perihel = differenz
@@ -75,11 +75,8 @@ class System:
     # berechnet die Geschwindigkeit, sowie die Position der Körper nach dem Runge-Kutta-Verfahren 4. Ordnung
     def r_update_rk4(self):
         for obj in self.objekte:
-            k0 = self.dt * obj.v
-            l0 = self.dt * self.gravitation_rk4(obj.r, obj)
-
-            k1 = self.dt * (obj.v + .5 * l0)
-            l1 = self.dt * self.gravitation_rk4(obj.r + .5 * k0, obj)
+            k1 = self.dt * obj.v
+            l1 = self.dt * self.gravitation_rk4(obj.r, obj)
 
             k2 = self.dt * (obj.v + .5 * l1)
             l2 = self.dt * self.gravitation_rk4(obj.r + .5 * k1, obj)
@@ -87,8 +84,11 @@ class System:
             k3 = self.dt * (obj.v + .5 * l2)
             l3 = self.dt * self.gravitation_rk4(obj.r + .5 * k2, obj)
 
-            obj.r += (1/6) * (k0 + 2 * k1 + 2 * k2 + k3) # ändert die berechnete Position des Körpers
-            obj.v += (1/6) * (l0 + 2 * l1 + 2 * l2 + l3) # ändert die berechnete Geschwindigkeit des Körpers
+            k4 = self.dt * (obj.v + .5 * l3)
+            l4 = self.dt * self.gravitation_rk4(obj.r + .5 * k3, obj)
+
+            obj.r += (1/6) * (k1 + 2 * k2 + 2 * k3 + k4) # ändert die berechnete Position des Körpers
+            obj.v += (1/6) * (l1 + 2 * l2 + 2 * l3 + l4) # ändert die berechnete Geschwindigkeit des Körpers
 
             # fügt die Koordinaten zu Output hinzu, bei jedem in print_genauigkeit definiertem Schritt
             if self.vergangene_t in self.schritt:
