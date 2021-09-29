@@ -10,7 +10,7 @@ proxima_centauri = Objekt(masse=0.1221 * solar_mass, r=np.array([8.2e3 * ae, 0.,
 
 alpha_centauri.objekt_hinzu(alpha_centauri_a, alpha_centauri_b, proxima_centauri) # fügt die Körper dem System hinzu -->
 """
-sonnensystem = System(0.01 * day, 10  * yr, "Sonnensystem mit Pluto", print_genauigkeit=100)
+sonnensystem = System(0.1 * day, 10  * yr, "Sonnensystem mit Pluto", print_genauigkeit=500)
 
 sonne = Objekt(masse=solar_mass, obj_id='Sonne')
 erde = Objekt(masse=5.9724e24, r=np.array([147.092e9, 0., 0.]), v=np.array([0., 30.29e3, 0.]), obj_id='Erde')
