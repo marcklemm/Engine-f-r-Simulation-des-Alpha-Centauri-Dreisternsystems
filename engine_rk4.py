@@ -38,12 +38,13 @@ class System:
         self.output_koords = output_koords # Datei für den Output der Koordinaten
         self.print_genauigkeit = print_genauigkeit # die Genauigkeit der Koordinaten, welche für Visualisierung bereitgestellt werden
         self.vergangene_t = 0 # die vergangene Zeit der Simulation
+
         # berechnet die print_genauigkeit
         if print_genauigkeit and print_genauigkeit > 1:
-            schritt = np.arange(0, self.t + self.dt, self.dt, dtype='int')
+            schritt = np.arange(0, self.t + self.dt, self.dt, dtype=np.int64)
             self.schritt = [x for i, x in enumerate(schritt) if i % (len(schritt) // (self.print_genauigkeit-1)) == 0]
         else:
-            self.schritt = np.arange(0, self.t + self.dt, self.dt, dtype='int')
+            self.schritt = np.arange(0, self.t + self.dt, self.dt, dtype=np.int64)
 
     # fügt alle Körper, welche für die Simulation verwendet werden sollen zum System hinzu
     def objekt_hinzu(self, *args):
@@ -57,6 +58,20 @@ class System:
                 richtungs_vek = obj.r - r # berechnet den Richtungsvektor zwischen r und obj.r
                 differenz = betrag(richtungs_vek) # berechnet den Abstand zwischen r und obj.r
 
+                r_betrag = betrag(obj.r-obj1.r)
+
+                if obj1.perihel == 0:
+                    obj1.perihel = r_betrag
+                    obj1.semi_ax_up()
+                if differenz <= obj1.perihel:
+                    obj1.perihel = r_betrag
+                    obj1.semi_ax_up()
+
+                if differenz >= obj1.apphel:
+                    obj1.apphel = r_betrag
+                    obj1.semi_ax_up()
+
+                """
                 # ändert Apsis, Periapsis und Halbachse
                 if i == 0:
                     if obj1.perihel == 0:
@@ -68,8 +83,7 @@ class System:
                     if differenz >= obj1.apphel:
                         obj1.apphel = differenz
                         obj1.semi_ax_up()
-
-
+                """
                 return G * obj.masse / differenz ** 3 * richtungs_vek # die Beschleunigung wird berechnet
 
     # berechnet die Geschwindigkeit, sowie die Position der Körper nach dem Runge-Kutta-Verfahren 4. Ordnung
@@ -97,13 +111,14 @@ class System:
                 obj.xs.append(x)
                 obj.ys.append(y)
                 obj.zs.append(z)
+                print("{}% Done".format(int(self.vergangene_t / self.t * 100)))
 
     # speichert die relevanten Daten in einer Json-Datei
     def output(self):
         data = {"Name": self.name, "dt": self.dt, "t": self.t}  # erstellt die relevanten Daten im Json-Format
-        for obj in self.objekte[1:]:
+        for obj in self.objekte[0:]:
             data[f'{obj.obj_id}'] = {'Exzentrizitaet': f'{obj.exzentrizitaet()}', 'Halbachse': f'{obj.semi_a}',
-                                     'Umlaufdauer': f'{obj.umlaufperiode(self.objekte[0]) / day}'}
+                                     'Umlaufdauer': f'{obj.umlaufperiode(self.objekte[0]) / day}'} # self.objekte[0]
         with open(self.output_file, 'r+') as log: # öffnet die Datei
             content = json.load(log) # lädt den Inhalt der Datei
             content.append(data) # fügt die Daten in den Inhalt ein
@@ -142,7 +157,7 @@ class Objekt:
         self.a = a # die Beschleunigung des Körpers
         self.v = v # die Geschwindigkeit des Körpers
         self.r = r # die Position des Körpers
-        self.semi_a = betrag(self.r) # die Apheldistanz
+        self.semi_a = 0 # die grosse Halbachse
         self.obj_id = obj_id # zur Identifikation des Körpers
 
         self.xs = [] # alle x-Koordinaten
@@ -161,5 +176,12 @@ class Objekt:
 
     # berechnet die Umlaufperiode des Körpers
     def umlaufperiode(self, obj):
-        return 2 * np.pi * np.sqrt(self.semi_a ** 3 / (G * (obj.masse + self.masse)))
+        if self.obj_id == "Alpha Centauri A":
+            return 2 * np.pi * np.sqrt(self.semi_a ** 3 / (G * ((0.9092  + 1.0788)* solar_mass)))
+        if self.obj_id == "Alpha Centauri B":
+            return 2 * np.pi * np.sqrt(self.semi_a ** 3 / (G * ((0.9092  + 1.0788)* solar_mass)))
+        if self.obj_id == "Proxima Centauri":
+            return 2 * np.pi * np.sqrt(self.semi_a ** 3 / (G * ((0.9092  + 1.0788 + 0.1221)* solar_mass)))
+        else:
+            return 2 * np.pi * np.sqrt(self.semi_a ** 3 / (G * (obj.masse + self.masse)))
 
